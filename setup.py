@@ -24,7 +24,8 @@ setup(name='ps.diazo.vanilla',
         ],
       keywords='plone diazo vanilla',
       author='Propertyshelf, Inc.',
-      author_email='development@propertyshelf.com',url='http://svn.plone.org/svn/collective/',
+      author_email='development@propertyshelf.com',
+      url='https://github.com/propertyshelf/ps.diazo.vanilla',
       license='GPL',
       packages=find_packages('src', exclude=['ez_setup']),
       package_dir={'': 'src'},
@@ -36,6 +37,7 @@ setup(name='ps.diazo.vanilla',
           'z3c.jbot',
           # -*- Extra requirements: -*-
       ],
+      
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
