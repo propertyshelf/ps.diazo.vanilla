@@ -1,0 +1,13 @@
+README.txt
+setup.py
+ps/__init__.py
+ps.diazo.vanilla.egg-info/PKG-INFO
+ps.diazo.vanilla.egg-info/SOURCES.txt
+ps.diazo.vanilla.egg-info/dependency_links.txt
+ps.diazo.vanilla.egg-info/entry_points.txt
+ps.diazo.vanilla.egg-info/namespace_packages.txt
+ps.diazo.vanilla.egg-info/not-zip-safe
+ps.diazo.vanilla.egg-info/requires.txt
+ps.diazo.vanilla.egg-info/top_level.txt
+ps/diazo/__init__.py
+ps/diazo/vanilla/__init__.py
