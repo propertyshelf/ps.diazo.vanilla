@@ -5,7 +5,7 @@ version = '0.1'
 
 setup(name='ps.diazo.vanilla',
       version=version,
-      description="Propertyshelfs basic Diazo theme",
+      description="Propertyshelfs Vanilla Theme",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -37,7 +37,7 @@ setup(name='ps.diazo.vanilla',
           'z3c.jbot',
           # -*- Extra requirements: -*-
       ],
-      
+
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
