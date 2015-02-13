@@ -2,138 +2,28 @@
 <rules
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+<rules css:if-content="#visual-portal-wrapper">
+    <theme href="/++theme++ps.diazo.vanilla/index.html" />
+    <!-- Header Rules -->
+    <xi:include href="/++theme++ps.diazo.vanilla/rules/header-rules.xml"/>
+    <!-- Viewlet Rules -->
+    <xi:include href="/++theme++ps.diazo.vanilla/rules/viewlet-rules.xml"/>
+    <!-- Portlet Rules -->
+    <xi:include href="/++theme++ps.diazo.vanilla/rules/portlet-rules.xml"/>
+    <!-- Content Rules -->
+    <xi:include href="/++theme++ps.diazo.vanilla/rules/content-rules.xml"/>
+    <!--Footer Rules -->
+    <xi:include href="/++theme++ps.diazo.vanilla/rules/footer-rules.xml"/>
+</rules>
+
 
     <!-- Apply the following rules to standard Plone pages -->
     <rules css:if-content="#visual-portal-wrapper">
 
-        <theme href="index.html" />
-
-      <!-- Replace title with Plone's page title  -->
-        <replace css:theme="html head title" css:content="html head title" />
-
-        <!-- Copy base tag from Plone -->
-        <before css:theme-children="html head" css:content="html head base"/>
-
-        <!-- Copy link, style, meta tags from Plone head -->
-        <after css:theme-children="html head"
-            content="/html/head/link | /html/head/style | /html/head/meta" />
-            
-        <!-- merge classes from Plone body with theme body -->
-        <merge attributes="class" css:theme="body" css:content="body" />
-               
-        <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html head" css:content="html head script" />
-
-        
-        <!-- Insert your own rules here -->    
-
-        <!-- Add manage-viewlets Top-->    
-        <rules css:if-content="#plone-portaltop.managedViewlets">     
-          <before 
-            css:content-children="#visual-portal-wrapper #portal-top .cell"
-            css:theme="#content .row #maincontent"
-          />
-        </rules>
-        
-        <rules css:if-content=".socialheader.toolkit .toolkit.viewlet">
-            <prepend
-                css:theme=".site-social"
-                css:content-children=".socialheader.toolkit .toolkit.viewlet"
-            />
-        </rules>
-        
-        <rules css:if-content="div.carousel">
-            <append 
-                css:content="#viewlet-above-content div.carousel" 
-                css:theme="#carousel-wrapper .carousel-inner"
-                method="raw"
-            />
-            <drop
-                css:content="#viewlet-above-content .carousel" 
-            />
-        </rules>
-        
-        <rules css:if-not-content="div.carousel">
-            <drop
-                css:theme="#carousel-wrapper" 
-            />
-        </rules>
-        
-        <!-- Add manage-viewlets Footer-->    
-        <rules css:if-content="#plone-portalfooter.managedViewlets">     
-            <after 
-                css:content-children="#visual-portal-wrapper #portal-footer-wrapper .cell"
-                css:theme="#content .row #maincontent"
-            />
-        </rules>
-
-        <replace
-            css:theme=".searchbox"
-            css:content="#portal-searchbox"
-        />
-
-        <replace
-            css:content="#portal-languageselector"
-            css:theme-children=".language-switcher"
-        />
-        
-
-        
-        <rules css:if-content="#portal-column-content.width-full">     
-          <drop 
-            css:theme=".content-portlets"
-          />
-        </rules>
-        
-        <replace
-            css:content="#portal-logo"
-            css:theme=".logo a"
-        />
-        
-        <replace
-            css:theme-children=".account .account-login"
-            css:content-children="#portal-personaltools-wrapper #portal-personaltools #anon-personalbar"
-        />  
-        
-        <replace
-            css:content="dt.portletHeader"
-            css:theme-children=".portlet .portletHeader span"
-        />
-        
-        <replace
-            css:content-children="#portal-globalnav"
-            css:theme-children="#navigation ul.navmenu"
-        />
-        
-         <replace
-            css:content-children="#portal-globalnav .submenu"
-            css:theme-children="#navigation ul.navmenu.nav li"
-        />
-        
-        <replace
-            css:content-children="#portal-footer-wrapper .width-full .row #doormat-container"
-            css:theme="#footer-top-inner.container .row"
-        />
-
-        <replace
-            css:content-children="#portal-colophon"
-            css:theme="#colophone .container .row"
-        />
-        
-         <replace
-            css:content-children="#footer #footer-inner .row"
-            css:theme="#colophone .container .siteactions"
-        />
-        
-        <drop
-            css:theme="#breadcrumbs-you-are-here"
-        />
-
-        <drop
-            css:content="span#breadcrumbs-you-are-here"
-        />
-        
         <drop
             css:theme=".toggle"
         />
@@ -166,63 +56,7 @@
             css:theme-children=".language-switcher"
         />
   
-        <!-- portlet left Start -->
-        <replace
-            css:theme-children=".portlet-left #maincontent"
-            css:content-children="#portal-column-content"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <replace
-            css:theme-children=".portlet-left #portlet-left .inner-portlet-left"
-            css:content-children="#portal-column-one"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <drop
-            css:theme=".portlet-right"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <drop
-            css:theme=".portlet-both"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <drop
-            css:theme=".no-portlet"
-            css:if-content="#portal-column-one"
-            css:if-not-content="#portal-column-two"
-        />
-        <!-- porlet left : END -->
-        <!-- porlet right : start -->
-        <replace
-            css:theme-children=".portlet-right #maincontent"
-            css:content-children="#portal-column-content"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <replace
-            css:theme-children=".portlet-right #portlet-right .inner-portlet-right"
-            css:content-children="#portal-column-two"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <drop
-            css:theme=".portlet-left"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <drop
-            css:theme=".portlet-both"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
-        <drop
-            css:theme=".no-portlet"
-            css:if-content="#portal-column-two"
-            css:if-not-content="#portal-column-one"
-        />
+        
         <!-- porlet bold : start -->
             <rules css:if-content="#portal-column-one">
                 <rules css:if-content="#portal-column-two">
@@ -325,6 +159,7 @@
             <drop
                 css:theme=".ps_slider_wrapper"
             />
+            
         </rules>
         <rules css:if-not-content=".ps_slider">
             <drop
@@ -332,11 +167,11 @@
             />
         </rules>
     </rules>
+
 <!-- Move PS Slider into cover Tile -->
-<!--  -->
 <replace css:content=".tile.ps_coverintegrated" css:if-content=".ps_slider.coverIntegrated">
-  <xsl:copy-of select="//div[@class='featured-listing-top ps_slider top coverIntegrated']" />
-  <xsl:apply-templates mode="raw" />
+    <xsl:copy-of select="//div[@class='featured-listing-top ps_slider top coverIntegrated']" />
+    <xsl:apply-templates mode="raw" />
 </replace>
 <drop css:content="#viewlet-above-content .ps_slider.coverIntegrated" css:if-content=".tile.ps_coverintegrated" />
 
