@@ -20,4 +20,23 @@
         </style>
     </after>
         
+    <rules css:if-content="#portal-personaltools .actionMenuHeader">
+        <prepend
+            css:theme=".account.pull-right"
+            css:content="#portal-personaltools-wrapper"
+        />
+    </rules>
+
+    <rules css:if-content="#portal-personaltools .actionMenuHeader">
+        <prepend
+            css:theme="#wrapper-inner #content"
+            css:content="#portal-column-content .documentEditablet #edit-bar"
+        />    
+    </rules> 
+
+    <replace
+        css:content="#portal-languageselector"
+        css:theme-children=".language-switcher"
+    />
+
 </rules>

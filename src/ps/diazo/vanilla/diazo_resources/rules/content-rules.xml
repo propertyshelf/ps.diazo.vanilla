@@ -32,5 +32,6 @@
     <!-- Login -->
     <replace
             css:theme-children=".account .account-login"
-            css:content-children="#portal-personaltools-wrapper #portal-personaltools #anon-personalbar"/>  
+            css:content-children="#portal-personaltools-wrapper #portal-personaltools #anon-personalbar"
+    />  
 </rules>
