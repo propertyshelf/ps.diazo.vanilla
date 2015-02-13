@@ -44,7 +44,8 @@
         </rules>  
         
         <drop
-            css:content="#LSResult #livesearchLegend"/>
+            css:content="#LSResult #livesearchLegend"
+        />
         
         <drop
             css:content=".searchSection"
@@ -58,31 +59,6 @@
   
         
         <!-- porlet bold : start -->
-            <rules css:if-content="#portal-column-one">
-                <rules css:if-content="#portal-column-two">
-                <replace
-                css:theme-children=".portlet-both #maincontent"
-                css:content-children="#portal-column-content"
-                />
-                <drop
-                    css:theme=".no-portlet, .portlet-right, .portlet-left"
-                />
-            </rules>
-            </rules>
-            <rules css:if-content="#portal-column-one">
-                <replace
-                css:theme-children="#portlet-right .inner-portlet-right"
-                css:content-children="#portal-column-two"
-                css:if-content="#portal-column-two"
-                />
-            </rules>
-            <rules css:if-content="#portal-column-two">
-                <replace
-                    css:theme-children="#portlet-left .inner-portlet-left"
-                    css:content-children="#portal-column-one"
-                    css:if-content="#portal-column-one"
-                />            
-            </rules>
         <!-- Portlet bold : END -->
         <!-- No portlet : Start -->
         <rules css:if-not-content="#portal-column-one">
