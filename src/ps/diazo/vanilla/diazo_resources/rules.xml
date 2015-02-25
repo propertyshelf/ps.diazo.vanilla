@@ -6,36 +6,22 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
 
-<rules css:if-content="#visual-portal-wrapper">
-    <theme href="/++theme++ps.diazo.vanilla/index.html" />
-    <!-- Header Rules -->
-    <xi:include href="/++theme++ps.diazo.vanilla/rules/header-rules.xml"/>
-    <!-- Viewlet Rules -->
-    <xi:include href="/++theme++ps.diazo.vanilla/rules/viewlet-rules.xml"/>
-    <!-- Portlet Rules -->
-    <xi:include href="/++theme++ps.diazo.vanilla/rules/portlet-rules.xml"/>
-    <!-- Content Rules -->
-    <xi:include href="/++theme++ps.diazo.vanilla/rules/content-rules.xml"/>
-    <!--Footer Rules -->
-    <xi:include href="/++theme++ps.diazo.vanilla/rules/footer-rules.xml"/>
-</rules>
-
-
-    <!-- Apply the following rules to standard Plone pages -->
     <rules css:if-content="#visual-portal-wrapper">
-
-        <drop
-            css:theme=".toggle"
-        />
-        
-        <drop
-            css:content="#LSResult #livesearchLegend"
-        />
-        
-        <drop
-            css:content=".searchSection"
-        />
-
-    </rules>   
+        <theme href="/++theme++ps.diazo.vanilla/index.html" />
+        <!-- Header Rules -->
+        <xi:include href="/++theme++ps.diazo.vanilla/rules/header-rules.xml"/>
+        <!-- Viewlet Rules -->
+        <xi:include href="/++theme++ps.diazo.vanilla/rules/viewlet-rules.xml"/>
+        <!-- Portlet Rules -->
+        <xi:include href="/++theme++ps.diazo.vanilla/rules/portlet-rules.xml"/>
+        <!-- Content Rules -->
+        <xi:include href="/++theme++ps.diazo.vanilla/rules/content-rules.xml"/>
+        <!--Footer Rules -->
+        <xi:include href="/++theme++ps.diazo.vanilla/rules/footer-rules.xml"/>
+        <!--PS Slider -->
+        <xi:include href="/++theme++ps.diazo.vanilla/rules/jssor-rules.xml"/>
+        <!--Nvavigation -->
+        <xi:include href="/++theme++ps.diazo.vanilla/rules/navigation-rules.xml"/>
+    </rules>
 
 </rules>
