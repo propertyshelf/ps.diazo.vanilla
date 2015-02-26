@@ -13,7 +13,7 @@ function setup_ListingSummary(){
     //...
 }
 function is_improvedListing(listing){
-/* 
+/*
     return true if we changed this listing already
     return false if we need to change it
     ...
@@ -54,11 +54,11 @@ function ajax_improveListing(listing){
     $(listing).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
     $(listing).append('<div class="price"><p class="value" >'+ dictonary.price +'</p></div>');
         if(dictonary.type=="house"){
-            $(listing).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');    
+            $(listing).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');
         }
         else{
-            $(listing).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
-        }     
+            $(listing).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');
+        }
 }
 
 function improveListing(listing){
@@ -78,11 +78,11 @@ function improveListing(listing){
     $(listing).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
     $(listing).append('<div class="price"><p class="value" >'+ dictonary.price +'</p></div>');
         if(dictonary.type=="house"){
-            $(listing).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');    
+            $(listing).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');
         }
         else{
-            $(listing).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
-        }     
+            $(listing).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');
+        }
 }
 
 /*Improve listing bar*/
@@ -99,12 +99,12 @@ function map_listing_data(obj){
   dict=[];
   counter = $(obj).children('dd').length;
   if(counter<10){
-    dict.type ='land';  
+    dict.type ='land';
   }
   else{
     dict.type ='house';
   }
-  
+
   dict.price= obj[0].children[1].innerHTML;
   dict.listingtype= obj[0].children[5].innerHTML;
   dict.propertytype= obj[0].children[9].innerHTML;
@@ -130,8 +130,8 @@ function map_listing_data(obj){
 
 function parse_location(location){
     //unparsed: San Joaquín, San Joaquín de Flores, Flores, Heredia, Costa Rica
-    //parsed: San Joaquín, Heredia, Costa Rica 
-    
+    //parsed: San Joaquín, Heredia, Costa Rica
+
     try {
         var splitter = location.split(",");
         //react on different location types
@@ -139,14 +139,14 @@ function parse_location(location){
         var center = splitter.length - 2;
         if(center>0 && last>1){
             location = splitter[0] +","+ splitter[center] +","+ splitter[last];
-        }      
+        }
     }
     catch(err) {
-        console.log(error);
+        console.log(error);  // noqa
     }
     return location;
 }
-function enhance_listiggrid(){ 
+function enhance_listiggrid(){
     $( ".listing-collection-tile .collection-item .item.location .item-body" ).each(function( index ) {
             mylocation = parse_location($(this).text());
             $(this).text(mylocation);
@@ -155,9 +155,9 @@ function enhance_listiggrid(){
             //remove the label of lot size to replace it with css icon
             $(this).children('.item-heading').remove();
             $(this).prepend('<span class="key" title="Area"> </span>');
-            
+
     });
-    
+
 }
 
 
@@ -206,7 +206,7 @@ function getDoormatClass(){
         //six columns
         col_class="col-md-2";
     }
-    
+
     return col_class;
 }
 
@@ -228,7 +228,7 @@ function toggle_listing_type(){
     $(".listing-search-tile #formfield-form-widgets-object_type label.horizontal").addClass('collapser collapsed');
     $(".listing-search-tile #formfield-form-widgets-ownership_type span").hide('slow');
     $(".listing-search-tile #formfield-form-widgets-ownership_type label.horizontal").addClass('collapser collapsed');
-    
+
     $(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal").click(function(){
         $(".listing-search-tile #formfield-form-widgets-air_condition span").slideToggle("slow");
         if($(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal.collapsed").length>0){
@@ -237,7 +237,7 @@ function toggle_listing_type(){
         else{
             $(".listing-search-tile #formfield-form-widgets-air_condition label.horizontal.expanded").removeClass('expanded').addClass('collapsed');
         }
-        
+
     });
     $(".listing-search-tile #formfield-form-widgets-pool label.horizontal").click(function(){
         $(".listing-search-tile #formfield-form-widgets-pool span").slideToggle("slow");
@@ -311,7 +311,7 @@ function class_print_listing(){
 
 function switch_slider_cover(){
     if($(".template-layoutedit").length>0){
-        $(".ps_coverintegrated .tile-name").replaceWith($( ".coverIntegrated" ));  
+        $(".ps_coverintegrated .tile-name").replaceWith($( ".coverIntegrated" ));
     }
     else{
         $(".ps_coverintegrated").replaceWith($( ".coverIntegrated" ));
@@ -323,7 +323,7 @@ function cover_listing_height(){
         var maxHeight = 0;
         $(this).find(".collection-item").each(function() {
             if($(this).height() > maxHeight) {
-                maxHeight = $(this).height();  
+                maxHeight = $(this).height();
             }
         });
         $(this).find(".collection-item").height(maxHeight);
@@ -331,7 +331,7 @@ function cover_listing_height(){
 }
 
 function resize_cover_listing_item(){
-	console.log("resize:Start");
+    console.log("resize:Start");  // noqa
 }
 
 $(document).ready(function() {
@@ -350,11 +350,11 @@ $(document).ready(function() {
     if($('.listingBar').length > 0){
         enhance_listingbar();
     }
-    
+
     if($('.listing.detail').length > 0){
         class_print_listing();
     }
-    
+
     improve_site_social();
     switch_toggle();
     if($(".listing-search-tile.tile-content").length >0){
@@ -375,12 +375,12 @@ $(document).ready(function() {
             $(".tileItem section:not(.improved)").each(function(index){
                 if(!is_improvedListing($(this))){
                     ajax_improveListing($(this));
-                    console.log("Ajax : End");
+                    console.log("Ajax : End");  // noqa
                 }
             });
         }
     });
-    
+
     $( window ).load(function() {
         if($('#content .listing-collection-tile').length > 0){
             cover_listing_height();
@@ -392,7 +392,7 @@ $(document).ready(function() {
             cover_listing_height();
         }
     });
-    
+
 });
 
 

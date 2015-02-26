@@ -8,5 +8,5 @@
     <replace css:content-children="#portal-globalnav .submenu" css:theme-children="#navigation ul.navmenu.nav li" />
     <drop css:theme="#breadcrumbs-you-are-here"/>
     <drop css:content="span#breadcrumbs-you-are-here"/>
-    
+
 </rules>

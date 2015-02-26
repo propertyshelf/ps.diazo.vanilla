@@ -26,7 +26,7 @@ $(".palette .header-special .add-carousel-clear").click(function(){
         $( "#carousel-wrapper" ).addClass("container");
         $( "#carousel-wrapper .carousel-inner" ).addClass("col-md-12");
     }
-   
+
  });
 }
 
