@@ -10,6 +10,7 @@ coverage/
 develop-eggs/
 dist/
 docs/build/
+docs/themepreview/
 downloads/
 eggs/
 parts/
