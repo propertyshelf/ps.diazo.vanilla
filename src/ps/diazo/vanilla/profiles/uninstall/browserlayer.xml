@@ -3,5 +3,6 @@
   <layer
       name="ps.diazo.vanilla"
       interface="ps.diazo.vanilla.interfaces.ICustomTheme"
+      remove="True"
       />
 </layers>
