@@ -4,7 +4,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    
+
     <replace
         css:content="dt.portletHeader"
         css:theme-children=".portlet .portletHeader span"
@@ -34,7 +34,7 @@
             css:theme-children="#portlet-left .inner-portlet-left"
             css:content-children="#portal-column-one"
             css:if-content="#portal-column-one"
-        />            
+        />
     </rules>
     <!-- Portlet bold : END -->
 

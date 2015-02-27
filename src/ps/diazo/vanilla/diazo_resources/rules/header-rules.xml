@@ -4,7 +4,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    
+
     <replace css:theme="html head title" css:content="html head title" />
     <!-- Copy base tag from Plone -->
     <before css:theme-children="html head" css:content="html head base"/>
@@ -19,7 +19,7 @@
             /* Exapmple CSS*/
         </style>
     </after>
-        
+
     <rules css:if-content="#portal-personaltools .actionMenuHeader">
         <prepend
             css:theme=".account.pull-right"
@@ -31,8 +31,8 @@
         <prepend
             css:theme="#wrapper-inner #content"
             css:content="#portal-column-content .documentEditablet #edit-bar"
-        />    
-    </rules> 
+        />
+    </rules>
 
     <replace
         css:content="#portal-languageselector"

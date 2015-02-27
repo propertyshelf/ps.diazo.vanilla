@@ -18,7 +18,7 @@
             method="raw"
         />
         <drop
-            css:content=".ps_slider"    
+            css:content=".ps_slider"
         />
         <drop
             css:theme=".ps_slider_wrapper.ps-right, .ps_slider_wrapper.aboveContent, .ps_slider_wrapper.aboveMenu, .ps_slider_wrapper.ps_slider_abovecolumns"
@@ -70,7 +70,7 @@
     <rules css:if-content=".ps_slider.coverIntegrated">
         <drop
             css:theme=".ps_slider_wrapper"
-        />    
+        />
      </rules>
 
     <rules css:if-not-content=".ps_slider">
@@ -83,7 +83,7 @@
         <xsl:copy-of select="//div[@class='featured-listing-top ps_slider top coverIntegrated']" />
         <xsl:apply-templates mode="raw" />
     </replace>
-    
+
     <drop css:content="#viewlet-above-content .ps_slider.coverIntegrated" css:if-content=".tile.ps_coverintegrated" />
 
 </rules>
