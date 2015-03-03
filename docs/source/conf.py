@@ -14,6 +14,7 @@
 
 import datetime
 import os
+import pkg_resources
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
