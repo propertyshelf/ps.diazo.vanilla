@@ -4,7 +4,6 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
-
     <replace css:theme="html head title" css:content="html head title" />
     <!-- Copy base tag from Plone -->
     <before css:theme-children="html head" css:content="html head base"/>
@@ -38,5 +37,16 @@
         css:content="#portal-languageselector"
         css:theme-children=".language-switcher"
     />
+        <after css:theme-children=".site-social" method="raw">
+            <div class="site_contact_email">
+                <a href="mailto:{$email}"><xsl:value-of select="$email" /></a>
+            </div>
+        </after>
+        
+        <after css:theme-children=".site-social" method="raw">
+            <div class="site_contact_phone">
+                <a href="tel:{$nr_phone}"><xsl:value-of select="$nr_phone_show" /></a>
+            </div>
+        </after>
 
 </rules>
