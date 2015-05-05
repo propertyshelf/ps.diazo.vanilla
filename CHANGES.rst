@@ -7,7 +7,7 @@ Changelog
 
 0.1
 -------------------
-- Initial styles and tules
+- Initial set of styles and rules
 - Initial release [Solomonic].
 - Use buildout.plonetest based package buildout. [tmassmann]
 - Fixed codeanalysis error messages. [tmassman]
