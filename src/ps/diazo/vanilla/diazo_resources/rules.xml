@@ -25,12 +25,10 @@
 
             <after css:theme-children="html head">
                 <!-- Add custom stylesheet. -->
-                <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.vanilla/static/main.css" type="text/css" />
                 <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.vanilla/bootstrap/css/bootstrap.min.css" type="text/css"/>
                 <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.vanilla/css/styles.css" type="text/css"/>
 
                 <!-- Add custom JavaScript. -->
-                <script src="{$portal_url}/++theme++ps.diazo.vanilla/static/main.js"></script>
 
                 <!--Include Google Fonts. -->
                 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />

@@ -409,7 +409,17 @@ function switch_slider_cover(){
     }
 }
 
+function old_carousel(){
+    if($("#content-header img").length>0){
+
+    }
+	else{
+        $("#content-header").remove();
+    }
+}
+
 $(document).ready(function() {
+	old_carousel();
     if (is_ListingRowPage()) {
         // set classes
         setup_ListingSummary();
