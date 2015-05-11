@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.4
+-------------------
+- fixed missing div before content header
+
 0.3
 -------------------
 - Bugfixes Listing Details
