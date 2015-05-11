@@ -35,7 +35,7 @@
 
     <rules css:if-content="#portal-content-header">
         <replace 
-            css:content-children="#portal-content-header"
+            css:content="#portal-content-header"
             css:theme="#content-header"
         />
     </rules>
