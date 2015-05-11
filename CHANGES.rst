@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.3
+-------------------
+- Bugfixes Listing Details
+
 0.2
 -------------------
 - improved default styles & icons
