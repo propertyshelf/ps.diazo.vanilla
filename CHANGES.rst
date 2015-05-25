@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.5
+-------------------
+- new default phone nr. in diazo parameters
+- bordered listing style (ListingResults) 
+
 0.4
 -------------------
 - fixed missing div before content header
