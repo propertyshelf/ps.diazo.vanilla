@@ -1,9 +1,13 @@
 Changelog
 =========
+0.7
+------------------------------
+- fix broken 0.6 release
 0.6
 ------------------------------
 - improved ListingQuickSearch
 - improved ListTiles (for covers)
+
 
 0.5
 -------------------
