@@ -20,8 +20,8 @@
     </after>
 
     <rules css:if-content="#portal-personaltools .actionMenuHeader">
-        <prepend
-            css:theme=".account.pull-right"
+        <append
+            css:theme="#footer-wrapper"
             css:content="#portal-personaltools-wrapper"
         />
     </rules>

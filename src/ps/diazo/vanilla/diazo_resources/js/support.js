@@ -5,7 +5,7 @@ function column_counter(items){
   if(my_width > 800){
     listing_col=3;
   }
-  else if(my_width > 600){
+  else if(my_width > 200){
     if(my_head_width < 400){
       listing_col=2;
     }
@@ -13,7 +13,7 @@ function column_counter(items){
       listing_col=1;
     }
   }
-  else if(my_width < 600){
+  else if(my_width < 200){
     listing_col=1;
   }
   else{
@@ -26,6 +26,7 @@ function column_counter(items){
 function balance_height(items){
   //get nr. of item columns
   columns= column_counter(items);
+  console.log('Columns :' + columns);
   //we have more then 1 column
   if(columns>1){
     //set height depending on column nr.
@@ -226,6 +227,7 @@ function parse_location(location){
 
     try {
         var splitter = location.split(",");
+		console.log(location);
         //react on different location types
         var last = splitter.length - 1;
         var center = splitter.length - 2;
@@ -436,6 +438,10 @@ $(document).ready(function() {
         enhance_listingbar();
     }
 
+    if($('.listing-collection-tile .tileItem').length > 0){
+        enhance_listiggrid()
+    }
+
     if($('.listing.detail').length > 0){
         class_print_listing();
     }
@@ -469,6 +475,7 @@ $(document).ready(function() {
 		if ($('.listing-collection-tile').length >0){
 			$('.listing-collection-tile').each(function(index){
 				balance_height($(this));
+          console.log("win  load");
 			});
 		}
     });
@@ -477,6 +484,7 @@ $(document).ready(function() {
 		if ($('.listing-collection-tile').length >0){
 			$('.listing-collection-tile').each(function(index){
 				balance_height($(this));
+          console.log("win resize");
 			});
 		}
     });
