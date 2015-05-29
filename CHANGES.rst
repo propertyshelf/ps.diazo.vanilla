@@ -1,5 +1,9 @@
 Changelog
 =========
+0.6
+------------------------------
+- improved ListingQuickSearch
+- improved ListTiles (for covers)
 
 0.5
 -------------------
