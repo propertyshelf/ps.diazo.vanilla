@@ -1,6 +1,14 @@
 Changelog
 =========
 
+
+0.8.3 (2015-06-02)
+------------------
+
+- css cleanup
+- support small-screen PS Jssor Slider
+
+
 0.8.2 (2015-06-02)
 ------------------
 
