@@ -84,7 +84,7 @@ function balance_height(items){
         }
       }
       
-    });  
+    });
   }
   else{
     //do nothing
@@ -92,7 +92,7 @@ function balance_height(items){
 }
 function is_ListingRowPage(){
     //returns true or false if the the page is Listing Summary
-    if($('section.listing-summary').length>0){
+    if($('section.listing-summary').length>0 && $('section.listing-summary.development-summary').length<1){
         return true;
     }
     else {
@@ -131,8 +131,13 @@ function add_class_improvelisting(){
 
 function ajax_improveListing(listing){
     // changes html of ONE listing
+    try{
+      dictonary = map_listing_data($(listing).children('dl'));
+    }catch(err) {
+        return false;
+    }
     $(listing).addClass('improved');
-    dictonary = map_listing_data($(listing).children('dl'));
+
     dictonary.title =$(listing).siblings('.tileHeadline').html();
     dictonary.linktarget= $(listing).parent().find('a:first').attr('href');
     $(listing).siblings('.tileHeadline').remove();
@@ -155,8 +160,13 @@ function ajax_improveListing(listing){
 
 function improveListing(listing){
     // changes html of ONE listing
+    try{
+      dictonary = map_listing_data($(listing).children('dl'));
+    }catch(err) {
+        return false;
+    }
     $(listing).addClass('improved');
-    dictonary = map_listing_data($(listing).children('dl'));
+    
     dictonary.title =$(listing).siblings('.tileHeadline').html();
     dictonary.linktarget= $(listing).parent().find('a:first').attr('href');
     $(listing).siblings('.tileHeadline').remove();
