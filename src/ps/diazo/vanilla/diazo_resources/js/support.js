@@ -26,7 +26,6 @@ function column_counter(items){
 function balance_height(items){
   //get nr. of item columns
   columns= column_counter(items);
-  console.log('Columns :' + columns);
   //we have more then 1 column
   if(columns>1){
     //set height depending on column nr.
@@ -227,7 +226,6 @@ function parse_location(location){
 
     try {
         var splitter = location.split(",");
-		console.log(location);
         //react on different location types
         var last = splitter.length - 1;
         var center = splitter.length - 2;
@@ -475,7 +473,6 @@ $(document).ready(function() {
 		if ($('.listing-collection-tile').length >0){
 			$('.listing-collection-tile').each(function(index){
 				balance_height($(this));
-          console.log("win  load");
 			});
 		}
     });
@@ -484,7 +481,6 @@ $(document).ready(function() {
 		if ($('.listing-collection-tile').length >0){
 			$('.listing-collection-tile').each(function(index){
 				balance_height($(this));
-          console.log("win resize");
 			});
 		}
     });
