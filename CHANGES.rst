@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.8
+----------------------
+- enable calculated height for ListingCollection Tiles
+
 0.7.1
 ----------------------
 - fix broken 0.7 release
