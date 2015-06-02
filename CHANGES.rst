@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.8.2 (2015-06-02)
+------------------
+
+- fix javascript for improving ListingDetails
+- catch error on Developments JS
+
 
 0.8.1 (2015-06-02)
 ------------------
