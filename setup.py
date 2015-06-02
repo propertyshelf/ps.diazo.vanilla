@@ -3,7 +3,7 @@
 
 from setuptools import setup, find_packages
 
-version = '0.8'
+version = '0.8.1'
 description = 'Propertyshelf Vanilla Theme.'
 long_description = ('\n'.join([
     open('README.rst').read(),
