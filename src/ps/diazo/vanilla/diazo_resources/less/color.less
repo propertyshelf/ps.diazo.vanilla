@@ -1,5 +1,24 @@
-
+// ----- Function Tiny n Cover -----
+    // ----- border ----
+    @border-portlet: #ddd;
+    
+    // ----- Font Responsive -----
+    // ----- Text Inside Logo (manage :portal_view_customizations/zope.interface.interface-plone.logo External Editor) -----
+    @Logo-text-less-1200: 36px;
+    @Logo-text-less-991: 28px;
+    @Logo-text-less-800: 25px;
+    @Logo-text-less-767: 23px;
+    @Logo-text-less-480: 19px;
+    @Logo-text-less-400: 12px;
+    // ----- Text Menu and Submenu (manage :portal_view_customizations/zope.interface.interface-plone.logo External Editor) -----
+    @Menu-text-less-1200: @add-font-size-menu;
+    @Menu-text-less-991: @add-font-size-menu;
+    @Menu-text-less-800: @add-font-size-menu;
+    @Menu-text-less-767: @add-font-size-menu;
+    @Menu-text-less-480: @add-font-size-menu;
+    @Menu-text-less-400: @add-font-size-menu;
 // ----- Font Setting -----
+    @Logo-text: 32px;
     @normal: 14px;
     @1h-size: 30px;
     @2h-size: 24px;
@@ -19,10 +38,10 @@
     @bg-wrapper-inner:transparent;
     @bg-account: #c4c4c4;
     @bg-header: #fff;
-    @bg-navigation: #f3f3f3;
-    @bg-navigation-button: #23451d;
+    @bg-navigation: #e1e1e1;
+    @bg-navigation-button: #e1e1e1;
     @bg-navigation-button-hover: #dadada;
-    @bg-content: #fff;
+    @bg-content: #f6f6f6;
     @bg-doormat: #eeeeee ;
     @bg-colophone: @bg-account;
     //--- header style ---
@@ -136,6 +155,20 @@
 .doormat-location .dm-address,.doormat-location .dm-mobile,.doormat-location .dm-office,.doormat-location .dm-email,.doormat-location .dm-skype {
     color: @color-header-listing;
 }
+.listing-summary .tileItem {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+#maincontent #content .listing-summary figure {
+    background-color: #e1e1e1; 
+}
+.listing-collection-tile .tileItem {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);    
+}
+#content .listing-collection-tile figure {
+     background-color: #e1e1e1;    
+}
 #global-wrapper {
     color: @color-main;
     #wrapper-inner {
@@ -173,9 +206,23 @@
             }
         }
     }
-    #content {
-        background-color: @bg-content;
-    }
+}
+#content .portlet.portletCalendar {
+    border: 1px solid  @border-portlet;
+}
+.portletQuickSearch {
+    border: 1px solid  @border-portlet;
+}
+.portletCalendar .portletHeader {
+    border-bottom: 1px solid  @border-portlet;
+}
+.portletCalendar .portletItem .ploneCalendar thead tr th {
+    border-right: 1px solid  @border-portlet;
+    border-left: 1px solid  @border-portlet;
+    border-bottom: 1px solid  @border-portlet;
+}
+body #global-wrapper #content {
+    background-color: @bg-content;
 }
 .listingBar span.active span{
     font-size: 14px !important;
@@ -221,6 +268,9 @@ div.listingBar a:hover{
     font-size: @2h-size;
     font-weight: bold;
 }
+#portal-logo p { 
+    font-size: @Logo-text;
+}
 #content .documentDescription{
     color: @color-of-description;
 }
@@ -238,18 +288,25 @@ div.listingBar a:hover{
 .portlet .portletHeader .managedPortletActions{
     font-size: 14px !important;
 }
+.portlet .portletHeader a , .portlet .portletHeader span{
+    color: @color-header-listing !important;
+}
 .managedPortlet.portlet .portletHeader {
     font-size: 14px !important;
 }
 .portlet.portletCalendar .portletHeader {
-    font-size: 1.4em;
+    font-size: 24px;
 }
 .portlet .portletHeader {
     font-size: @porletheader-size;
     color: @color-header-listing;
 }
-dl.portlet dt.portletHeader {
-    background: @bg-portlet-header;
+.portlet .portletHeader a {
+    font-size: @porletheader-size;
+    color: @color-header-listing;
+}
+#global-wrapper #content img.tileImage, #content div.newsImageContainer {
+    background: @color-header-listing none repeat scroll 0 0;
 }
 .portlet .ploneCalendar .weekdays th {
     background: @bg-portlet-calendar;
@@ -611,7 +668,67 @@ label.horizontal.collapser.expanded {
     }
     
 // ----- Header style - End-----
-@media (max-width: 480px) and (min-width: 1px) {
+@media (max-width: 1200px) and (min-width: 992px) {
+    body.header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
+        font-size: @Menu-text-less-1200;
+    }
+    #portal-logo p {
+        font-size: @Logo-text-less-1200;
+    }
+}
+@media (max-width: 991px) and (min-width: 981px) {   
+    body.header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
+        font-size: @Menu-text-less-991;
+    }
+    #portal-logo p {
+        font-size: @Logo-text-less-991;
+    }
+}
+@media (max-width: 980px) and (min-width: 801px) {
+    body.header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
+        font-size: @Menu-text-less-991;
+    }
+    #portal-logo p {
+        font-size: @Logo-text-less-991;
+    }
+}
+@media (max-width: 800px) and (min-width: 768px) {
+    body.header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
+        font-size: @Logo-text-less-800;
+    }
+    #portal-logo p {
+        font-size: @Logo-text-less-800;
+    }
+}
+@media (max-width: 767px) and (min-width: 481px) {
+    body.header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
+        font-size: @Menu-text-less-767;
+    }
+    #portal-logo p {
+        font-size: @Logo-text-less-767;
+    }
+}
+@media (max-width: 480px) and (min-width: 401px) {
+    body.header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
+        font-size: @Menu-text-less-480;
+    }
+    #portal-logo p {
+        font-size: @Logo-text-less-480;
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown {
+         background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:hover, #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:focus {
+         background: url("../images/arrow-bottom-black-90.png") no-repeat scroll right center rgba(0, 0, 0, 0) !important;
+    }
+}
+@media (max-width: 400px) and (min-width: 1px) {
+    body.header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
+        font-size: @Menu-text-less-400;
+    }
+    #portal-logo p {
+        font-size: @Logo-text-less-400;
+    }
     #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown {
          background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
     }
