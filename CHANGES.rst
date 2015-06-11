@@ -1,5 +1,12 @@
+=========
 Changelog
 =========
+
+
+1.0 (2015-06-11)
+----------------
+
+- include *Devolpments header embedding*
 
 
 0.9 (2015-06-04)

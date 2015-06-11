@@ -3,8 +3,8 @@
 
 from setuptools import setup, find_packages
 
-version = '0.9'
-description = 'Propertyshelf Vanilla Theme.'
+version = '1.0'
+description = 'Diazo Vanilla-Theme.'
 long_description = ('\n'.join([
     open('README.rst').read(),
     open('CHANGES.rst').read(),
