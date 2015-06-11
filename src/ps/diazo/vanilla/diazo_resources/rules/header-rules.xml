@@ -40,6 +40,12 @@
         />
     </rules>
 
+    <before 
+        css:content=".development__header"
+        css:theme="#content"
+        method="raw"
+    />
+
     <replace
         css:content="#portal-languageselector"
         css:theme-children=".language-switcher"

@@ -1,6 +1,68 @@
 @import "command.less";
 @import "color.less";
 
+/*Development Collection*/
+.development_details .listing-summary .tileItem .image_row {
+    overflow: hidden;
+}
+.development_details .data_row .price {
+    font-size: 1.2em;
+    height: auto;
+    padding: 9px 0;
+}
+.development_details .data_row .lot_size {
+    font-size: 12px;
+    line-height: 15px;
+}
+.development_details .listing-summary .tileItem {
+    margin-bottom: 1em;
+    float: left;
+    width: 48%;
+}
+body #global-wrapper #content .development-summary section dt.location {
+    background-image: url("../images/icons/location-type-icon.png");
+    background-position: center center;
+    color: transparent;
+    float: left;
+    height: 24px;
+    white-space: nowrap;
+    width: 20px;
+}
+body #global-wrapper #content .development-summary dd.location {
+    width: auto;
+}
+body #global-wrapper #content .development-summary dt {
+    color: #606060;
+    float: left;
+    font-size: 14px;
+    margin-top: 7px;
+    text-align: left;
+    width: 27%;
+}
+body #global-wrapper #content .development-summary dd {
+    float: left;
+    margin-top: 7px;
+    width: 70%;
+}
+body .development-summary .tileItem{
+    padding: 2%;
+    margin-bottom: 1em;
+}
+body .development-summary .tileItem .tileHeadline {
+    margin-top: 0;
+}
+body #global-wrapper #content .development-summary figure {
+    max-width: 40%;
+    width: auto;
+}
+#maincontent #content .listing-summary figure {
+    background-color: #e1e1e1;
+}
+body #global-wrapper .development-summary section {
+    width: 60%;
+    padding: 0.5% 0 0 2%;
+}
+/*Development Collection End*/
 .listing-collection-tile .collection-item.tileItem .price h5 {
     display: none;
 }
@@ -1219,6 +1281,12 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 1200px) and (min-width: 991px) {
+    body #global-wrapper #content .development-summary dt {
+        width: 40%;
+    }
+    body #global-wrapper #content .development-summary dd {
+        width: 56%;
+    }
     #content .listing #listing-images {
         float: none;
     }
@@ -1262,6 +1330,12 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 990px) and (min-width: 981px) {   
+    body #global-wrapper #content .development-summary dt {
+        width: 40%;
+    }
+    body #global-wrapper #content .development-summary dd {
+        width: 56%;
+    }
     .portlet-both #maincontent{
         width: 100%;
     }
@@ -1320,6 +1394,17 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 980px) and (min-width: 801px) {
+    .development_details .data_row .lot_size {
+        font-size: 12px;
+        line-height: 12px;
+        padding: 4px 0 8px;
+    }
+    body #global-wrapper #content .development-summary dt {
+        width: 40%;
+    }
+    body #global-wrapper #content .development-summary dd {
+        width: 56%;
+    }
     .portlet-both #maincontent{
         width: 100%;
     }
@@ -1382,6 +1467,23 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 800px) and (min-width: 768px) {
+    body #global-wrapper #content .development-summary figure {
+        max-width: none;
+        text-align: center;
+        width: 100%;
+    }
+    body #global-wrapper #content .development-summary figure img {
+        width: auto;
+    }
+    body #global-wrapper .development-summary section {
+        width: 100%;
+    }
+    body #global-wrapper #content .development-summary dd{
+        width: 50%;
+    }
+    body #global-wrapper #content .development-summary dt{
+        width: 40%;
+    }
     .portlet-both #maincontent{
         width: 100%;
     }
@@ -1435,6 +1537,48 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {
+    body #global-wrapper #content .development_details .listing-summary figure {
+        width: 100% !important;
+        margin-bottom: 5px;
+    }
+    body #global-wrapper #content .development_details .listing-summary .tileHeadline{
+        text-align: left;
+    }
+    body .development_details .data_row .price {
+        height: auto;
+        font-size: 1.2em;
+    }
+    body #global-wrapper #content .development_details .listing-summary figure a img{
+        height: auto;
+        max-height: none;
+        max-width: none;
+        min-height: auto;
+        position: static;
+    }
+    #content .development_details .listing-summary .tileItem .image_row {
+        max-height: none;
+        height: auto;
+    }
+    body #global-wrapper #content .development_details .listing-summary figure {
+        width: 30%;
+    }
+    body #global-wrapper #content .development-summary figure {
+        max-width: none;
+        text-align: center;
+        width: 100%;
+    }
+    body #global-wrapper #content .development-summary figure img {
+        width: auto;
+    }
+    body #global-wrapper .development-summary section {
+        width: 100%;
+    }
+    body #global-wrapper #content .development-summary dd{
+        width: 50%;
+    }
+    body #global-wrapper #content .development-summary dt{
+        width: 40%;
+    }
     #global-wrapper #content .listing-collection-tile .collection-item.tileItem {
         height: auto !important;
     }
@@ -1624,6 +1768,48 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 401px) {
+    body #global-wrapper #content .development_details .listing-summary figure {
+        width: 100% !important;
+        margin-bottom: 5px;
+    }
+    body #global-wrapper #content .development_details .listing-summary .tileHeadline{
+        text-align: left;
+    }
+    body .development_details .data_row .price {
+        height: auto;
+        font-size: 1.2em;
+    }
+    body #global-wrapper #content .development_details .listing-summary figure a img{
+        height: auto;
+        max-height: none;
+        max-width: none;
+        min-height: auto;
+        position: static;
+    }
+    #content .development_details .listing-summary .tileItem .image_row {
+        max-height: none;
+        height: auto;
+    }
+    body #global-wrapper #content .development_details .listing-summary figure {
+        width: 30%;
+    }
+    body #global-wrapper #content .development-summary figure {
+        max-width: none;
+        text-align: center;
+        width: 100%;
+    }
+    body #global-wrapper #content .development-summary figure img {
+        width: auto;
+    }
+    body #global-wrapper .development-summary section {
+        width: 100%;
+    }
+    body #global-wrapper #content .development-summary dd{
+        width: 50%;
+    }
+    body #global-wrapper #content .development-summary dt{
+        width: 40%;
+    }
     #global-wrapper #content .listing-collection-tile .collection-item.tileItem {
         height: auto !important;
     }
@@ -1813,6 +1999,48 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 400px) and (min-width: 1px) {
+    body #global-wrapper #content .development_details .listing-summary figure {
+        width: 100% !important;
+        margin-bottom: 5px;
+    }
+    body #global-wrapper #content .development_details .listing-summary .tileHeadline{
+        text-align: left;
+    }
+    body .development_details .data_row .price {
+        height: auto;
+        font-size: 1.2em;
+    }
+    body #global-wrapper #content .development_details .listing-summary figure a img{
+        height: auto;
+        max-height: none;
+        max-width: none;
+        min-height: auto;
+        position: static;
+    }
+    #content .development_details .listing-summary .tileItem .image_row {
+        max-height: none;
+        height: auto;
+    }
+    body #global-wrapper #content .development_details .listing-summary figure {
+        width: 30%;
+    }
+    body #global-wrapper #content .development-summary figure {
+        max-width: none;
+        text-align: center;
+        width: 100%;
+    }
+    body #global-wrapper .development-summary section {
+        width: 100%;
+    }
+    body #global-wrapper #content .development-summary figure img {
+        width: auto;
+    }
+    body #global-wrapper #content .development-summary dd{
+        width: 50%;
+    }
+    body #global-wrapper #content .development-summary dt{
+        width: 40%;
+    }
     #global-wrapper #content .listing-collection-tile .collection-item.tileItem {
         height: auto !important;
     }

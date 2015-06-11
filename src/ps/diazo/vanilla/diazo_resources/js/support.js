@@ -440,7 +440,6 @@ $(document).ready(function() {
             }
         });
     }
-
     // only do when we have a listingbar
     if($('.listingBar').length > 0){
         enhance_listingbar();
@@ -467,6 +466,7 @@ $(document).ready(function() {
         doormat_col_class=getDoormatClass();
         $("#footer-top-inner .doormatColumn").addClass(doormat_col_class);
     }
+
     // Ajax Complete
     $( document ).ajaxComplete(function() {
         if (is_ListingRowPage()) {
