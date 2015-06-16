@@ -3,6 +3,12 @@ Changelog
 =========
 
 
+1.1 (2015-06-16)
+----------------
+
+- improve on cached developments summary images
+
+
 1.0 (2015-06-11)
 ----------------
 
