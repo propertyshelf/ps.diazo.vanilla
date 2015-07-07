@@ -24,9 +24,38 @@ Vanilla Theme (Diazo)
     - *Products.Carousel* *[1]*
     [**1** *optional but needed for full features*]
 
-:DEACTIVATE plone default css files:
+:Setup Steps:
+    *DEACTIVATE Plone default css files*
     - reset.css
     - public.css
+
+:Parameter:
+    Theme Color 20 style ( blue , gray-blue )
+    Header Class 4 style ( normal , light , dark , dark-dark )
+
+theme_color:
+    - blue
+    - brown
+    - *Default:* theme_color = string:blue
+
+header_class:
+    - normal
+    - light
+    - dark
+    - dark-dark
+    - *Default:* header_class = string:normal
+
+nr_phone_show:
+    - This phone number shows on header contact information
+    - *Default:* nr_phone_show = string:+166 1418 7657
+
+nr_phone:
+    - Is dialed by apps when click on header phone number
+    - *Default:* nr_phone = string:16614187657
+
+email:
+    - This email is use in the header contact imformation
+    - *Default:* email = string:info@propertyshelf.com
 
 :Contact:
     *development@propertyshelf.com*
