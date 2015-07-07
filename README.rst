@@ -36,7 +36,6 @@ Vanilla Theme (Diazo)
         - normal
         - light
         - dark
-        - dark-dark
         - *Default:* header_class = string:normal
 
     *nr_phone_show:*
