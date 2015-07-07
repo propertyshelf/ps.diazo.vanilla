@@ -24,6 +24,10 @@ Vanilla Theme (Diazo)
     - *Products.Carousel* *[1]*
     [**1** *optional but needed for full features*]
 
+:DEACTIVATE plone default css files:
+    - reset.css
+    - public.css
+
 :Contact:
     *development@propertyshelf.com*
 

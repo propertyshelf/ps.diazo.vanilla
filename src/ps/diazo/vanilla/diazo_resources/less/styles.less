@@ -772,9 +772,6 @@ label.horizontal.collapser.expanded {
 .template-logged_out #login-form .formControls {
     text-align: center;
 }
-#carousel-wrapper {
-    margin-bottom: 15px;
-}
 
 #wrapper-inner #header .navbar {
     margin-top: 20px;
@@ -868,6 +865,7 @@ label.horizontal.collapser.expanded {
 }
 .carousel-inner .carousel .carousel-banner .carousel-text {
     background-color: rgba(0, 0, 0, 0.5) !important;
+    width: 100%;
 }
 #content .listing-collection-tile figure {
     border: medium none transparent;
@@ -1069,7 +1067,33 @@ ul#content-views li{
     z-index: 10;
 }
 #carousel-wrapper {
-    margin-top: 15px;
+    overflow: auto;
+}
+.carousel {
+    margin: 0;
+}
+.carousel .carousel-banners{
+    width: 100%;
+}
+.carousel .carousel-banners .carousel-banner img {
+    height: 100% !important;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100% !important;
+}
+body .carousel .carousel-banners {
+    max-width: 100%;
+    height: auto !important;
+    min-width: 100%;
+}
+body .carousel-banners .carousel-banner {
+    height: auto !important;
+    max-width: 100%;
+    min-width: 100%;
+    position: static !important;
+}
+body .carousel-inner {
+    padding: 0;
 }
 #header #header-inner .container{
     z-index: 1;
