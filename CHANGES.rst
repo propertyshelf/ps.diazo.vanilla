@@ -3,11 +3,12 @@ Changelog
 =========
 
 
-1.1 (2015-06-16)
+1.1 (2015-07-07)
 ----------------
 
 - improve on cached developments summary images
-
+- add fullscreen carousel
+- update README.rst
 
 1.0 (2015-06-11)
 ----------------
