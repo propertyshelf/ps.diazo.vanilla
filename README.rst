@@ -30,25 +30,22 @@ Vanilla Theme (Diazo)
     - public.css
 
 :Parameter:
-    Theme Color 20 style ( blue , gray-blue )
-    Header Class 4 style ( normal , light , dark , dark-dark )
-
-header_class:
+    header_class:
     - normal
     - light
     - dark
     - dark-dark
     - *Default:* header_class = string:normal
 
-nr_phone_show:
+    nr_phone_show:
     - This phone number shows on header contact information
     - *Default:* nr_phone_show = string:+166 1418 7657
 
-nr_phone:
+    nr_phone:
     - Is dialed by apps when click on header phone number
     - *Default:* nr_phone = string:16614187657
 
-email:
+    email:
     - This email is use in the header contact imformation
     - *Default:* email = string:info@propertyshelf.com
 
