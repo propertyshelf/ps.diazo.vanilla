@@ -30,7 +30,8 @@ Vanilla Theme (Diazo)
     - public.css
 
 :Parameter:
-    **You can adjust the following Diazo parameters in Advanced settings of the *Theme* Tab**
+    *You can adjust the following Diazo parameters in Advanced settings of the **Theme** Tab*
+    
     *header_class:*
         - normal
         - light
