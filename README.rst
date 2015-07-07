@@ -33,11 +33,6 @@ Vanilla Theme (Diazo)
     Theme Color 20 style ( blue , gray-blue )
     Header Class 4 style ( normal , light , dark , dark-dark )
 
-theme_color:
-    - blue
-    - brown
-    - *Default:* theme_color = string:blue
-
 header_class:
     - normal
     - light
