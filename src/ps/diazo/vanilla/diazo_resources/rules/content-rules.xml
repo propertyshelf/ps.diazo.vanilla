@@ -13,14 +13,21 @@
             <prepend css:theme=".site-social" css:content-children=".socialheader.toolkit .toolkit.viewlet"/>
     </rules>
     <!-- Carousel -->
-    <rules css:if-content="div.carousel">
-        <append css:content="#viewlet-above-content div.carousel"
-                css:theme="#carousel-wrapper .carousel-inner"
-                method="raw"/>
-        <drop css:content="#viewlet-above-content .carousel" />
-    </rules>
-    <rules css:if-not-content="div.carousel">
-        <drop css:theme="#carousel-wrapper"/>
+    <before theme-children="/html/body/div" method="raw">
+        <xsl:attribute name="class">
+            <xsl:value-of select="/html/body/div/@class" />carousel-fullscreen-<xsl:value-of select="$slider_fullscreen"/>
+        </xsl:attribute>
+    </before>
+
+    <rules css:if-content=".carousel" if="$slider_fullscreen = 'true'">
+        <before
+            css:theme-children="#carousel-wrapper .carousel-inner"
+            css:content=".carousel"
+            method="raw"
+        />
+        <drop
+            css:content=".carousel"
+        />
     </rules>
 
     <replace css:theme=".searchbox" css:content="#portal-searchbox"/>
