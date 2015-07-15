@@ -50,6 +50,12 @@ Vanilla Theme (Diazo)
         - This email is use in the header contact imformation
         - *Default:* email = string:info@propertyshelf.com
 
+    *slider_fullscreen:*
+        - true
+        - false
+        - *Default:* slider_fullscreen = string:false
+    
+
 :Contact:
     *development@propertyshelf.com*
 
