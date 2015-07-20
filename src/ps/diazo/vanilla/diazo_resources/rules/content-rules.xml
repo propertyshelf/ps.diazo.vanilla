@@ -29,6 +29,11 @@
             css:content=".carousel"
         />
     </rules>
+    <rules css:if-not-content=".carousel">
+        <drop
+            css:theme="#carousel-wrapper"
+        />
+    </rules>
 
     <replace css:theme=".searchbox" css:content="#portal-searchbox"/>
     <replace css:content="#portal-languageselector" css:theme-children=".language-switcher"/>
