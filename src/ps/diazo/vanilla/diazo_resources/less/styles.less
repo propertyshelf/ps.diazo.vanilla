@@ -1,5 +1,13 @@
 @import "command.less";
 @import "color.less";
+
+#content .listing-summary.development-summary .tileItem figure a {
+    text-align: center;
+}
+#content .listing-summary.development-summary .tileItem figure img {
+    height: auto;
+    width: auto;
+}
 body #global-wrapper #content .width-8 .listing-collection-tile .collection-item.tileItem  {
     width: 100%;
 }
@@ -1478,6 +1486,9 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 980px) and (min-width: 801px) {
+    #content .listing-summary.development-summary .tileItem section {
+        width: 59%;
+    }
     body #global-wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem  {
         width: 100%;
     }
