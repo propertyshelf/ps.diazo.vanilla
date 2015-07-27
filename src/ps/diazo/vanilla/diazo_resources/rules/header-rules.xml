@@ -18,6 +18,18 @@
             /* Exapmple CSS*/
         </style>
     </after>
+    
+    <rules css:if-content="#google-script">
+        <append
+            css:content="#google-script script"
+            css:theme="body"
+        />
+    </rules>
+
+    <append
+        css:content="#portal-footer-wrapper script"
+        css:theme="body"
+    />
 
     <rules css:if-content="#portal-personaltools .actionMenuHeader">
         <append

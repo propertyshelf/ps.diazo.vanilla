@@ -20,6 +20,9 @@
 }
 #content .listing-summary.development-summary .tileItem figure img {
     height: auto;
+    max-width: 100%;
+    min-width: auto;
+    position: static;
     width: auto;
 }
 body #global-wrapper #content .width-8 .listing-collection-tile .collection-item.tileItem  {
@@ -39,6 +42,11 @@ body #content .listing-summary section {
 }
 body #content .listing-summary figure img {
     height: 220px;
+    max-width: none;
+    min-width: 112%;
+    position: relative;
+    right: 12%;
+    width: auto;
 }
 body h1, body h2, body h3 {
     line-height: 1.4em;
@@ -115,6 +123,7 @@ body #global-wrapper #content .development-summary figure {
 }
 #maincontent #content .listing-summary figure {
     background-color: #e1e1e1;
+    overflow: hidden;
 }
 #maincontent {
     overflow: hidden;
@@ -170,9 +179,6 @@ body #global-wrapper .development-summary section {
     max-width: none;
     min-height: 100%;
     width: auto;
-}
-.portlet .portletHeader {
-    clear: both;
 }
 #content dl.portlet.portletQuickSearch .portletItem {
     padding: 0 5% 12px;
@@ -293,7 +299,10 @@ body input#buttons-cancel {
 #listing-search.properties-rows #search-form #form .form-rows #formfield-form-widgets-listing_type label.horizontal {
     display: none;
 }
-.listing-collection-tile .tileItem div,.listing-collection-tile .tileItem h2{
+.listing-collection-tile .tileItem div,
+.listing-collection-tile .tileItem h2,
+.listing-collection-tile .tileItem h3,
+.listing-collection-tile .tileItem h4{
     padding: 0 5%;
 }
 .listing-collection-tile .tileItem div:last-child {
@@ -440,8 +449,11 @@ body .pop-search div ul li{
     padding-left: 10px;
     padding-right: 10px;
 }
-.portlet .portletHeader {
-    padding: 0;
+body #content {
+    margin-bottom: 0;
+}
+#content .portlet .portletHeader {
+    clear: both;
     margin-bottom: 10px;
 }
 .portletSearch .portletHeader{
@@ -1500,6 +1512,10 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 980px) and (min-width: 801px) {
+    body #content .listing-summary figure img {
+        min-width: auto;
+        position: static;    
+    }
     #content .listing-summary.development-summary .tileItem section {
         width: 59%;
     }
@@ -1592,6 +1608,10 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 800px) and (min-width: 768px) {
+    body #content .listing-summary figure img {
+        min-width: auto;
+        position: static;    
+    }
     body #global-wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem  {
         width: 100%;
     }
@@ -1679,6 +1699,10 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {
+    body #content .listing-summary figure img {
+        min-width: auto;
+        position: static;    
+    }
     body #global-wrapper .no-portlet #content .width-8 .listing-collection-tile .collection-item.tileItem  {
         width: 100%;
     }
@@ -1944,6 +1968,14 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 401px) {
+    body #content .listing-summary figure img {
+        min-width: auto;
+        position: static;    
+    }
+    body #maincontent #content .listing-summary figure img {
+        height: auto;
+        width: 100%;
+    }
     body #global-wrapper #content .listing-collection-tile .collection-item.tileItem h2 a {
         word-break: break-all;
     }
@@ -2212,6 +2244,14 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 400px) and (min-width: 1px) {
+    body #content .listing-summary figure img {
+        min-width: auto;
+        position: static;    
+    }
+    body #maincontent #content .listing-summary figure img {
+        height: auto;
+        width: 100%;
+    }
     body #global-wrapper #content .listing-collection-tile .collection-item.tileItem h2 a {
         word-wrap: break-word;
     }
