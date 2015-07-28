@@ -177,14 +177,14 @@ function improveListing(listing){
     //set location
     $(listing).append('<div class="status"><a href="'+ dictonary.linktarget +'">'+dictonary.loctype+' '+dictonary.propertytype+' - '+ dictonary.listingtype +'</a></div>');
     $(listing).append('<div class="location" ><div class="title"><a href="'+ dictonary.linktarget +'">'+dictonary.location+'</a></div></div>');
-    $(listing).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
-    $(listing).append('<div class="price"><p class="value" >'+ dictonary.price +'</p></div>');
         if(dictonary.type=="house"){
             $(listing).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');
         }
         else{
             $(listing).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');
         }
+    $(listing).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
+    $(listing).append('<div class="price"><p class="value" >'+ dictonary.price +'</p></div>');
 }
 
 /*Improve listing bar*/

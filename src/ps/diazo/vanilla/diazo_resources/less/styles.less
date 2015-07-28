@@ -41,7 +41,7 @@ body #content .listing-summary section {
     width: 70%;
 }
 body #content .listing-summary figure img {
-    height: 220px;
+    height: 240px;
     max-width: none;
     min-width: 112%;
     position: relative;
@@ -126,7 +126,7 @@ body #global-wrapper #content .development-summary figure {
     overflow: hidden;
 }
 #maincontent {
-    overflow: hidden;
+
 }
 body #global-wrapper .development-summary section {
     width: 60%;
@@ -939,8 +939,10 @@ label.horizontal.collapser.expanded {
 #content .listing-collection-tile figure {
     border: medium none transparent;
     max-height: 240px;
+    min-height: 240px;
     overflow: hidden;
     padding: 0;
+    text-align: center;
 }
 #global-wrapper #content .listing-collection-tile .item-heading {
     width: 45%;
@@ -1304,12 +1306,9 @@ ul#portal-languageselector:hover li {
     padding: 0 !important;
 }
 .improved .bedbath {
-    display: inline-block;
-    width: 60%;    
+    height: 26px;
     margin-bottom: 3px;
-}
-.improved .status a{
-    margin-left: 5px;
+    width: 100%;
 }
 .improved .location {
     margin-top: 10px;
@@ -1317,14 +1316,16 @@ ul#portal-languageselector:hover li {
 }
 .improved .bedbath .bathrooms {
     background-image: url("../images/icons/bedandbath.png");
-    padding: 13.5px 25.8px !important;
     float: left;
-    background-position: -5px center;
+    margin-right: 6px;
+    padding: 10.4px !important;
+    width: 50px;
 }
 .improved .bedbath .value {
     float: left;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-top: 4px;
+    width: 24px;
 }
 .improved .area .key {
     background-image: url("../images/icons/area-icon.png");
@@ -1333,8 +1334,16 @@ ul#portal-languageselector:hover li {
 }
 .improved .area {
      margin: 5px 0;
-     width: 44%;
-     float: left;
+     width: 100%;
+}
+.improved .locationtype .key {
+    background-image: url("../images/icons/location-type-icon.png");
+    margin-right: 6px;
+    padding: 4.4px 11.7px !important;
+}
+.improved .locationtype {
+     margin: 5px 0 10px;
+     width: 100%;
 }
 .improved .price {
     float: right;
@@ -1707,10 +1716,7 @@ ul#portal-languageselector:hover li {
         width: 100%;
     }
     body #content .listing-summary section .price {
-        bottom: 0;
-        float: none;
-        position: absolute;
-        right: 10px;
+        float: right;
     }
     body #content .listing-summary section {
         position: relative;
@@ -1968,6 +1974,12 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 401px) {
+    .listing-summary.properties-rows .tileItem{
+        padding-bottom: 10px;
+    }
+    .improved .price p {
+        font-size: 20px;
+    }
     body #content .listing-summary figure img {
         min-width: auto;
         position: static;    
@@ -1986,10 +1998,7 @@ ul#portal-languageselector:hover li {
         width: 100% !important;
     }
     body #content .listing-summary section .price {
-        bottom: 0;
-        float: none;
-        position: absolute;
-        right: 10px;
+        float: right;
     }
     body #content .listing-summary section {
         position: relative;
@@ -2244,6 +2253,12 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 400px) and (min-width: 1px) {
+    .listing-summary.properties-rows .tileItem{
+        padding-bottom: 10px;
+    }
+    .improved .price p {
+        font-size: 20px;
+    }
     body #content .listing-summary figure img {
         min-width: auto;
         position: static;    
@@ -2262,10 +2277,7 @@ ul#portal-languageselector:hover li {
         width: 100% !important;
     }
     body #content .listing-summary section .price {
-        bottom: 0;
-        float: none;
-        position: absolute;
-        right: 10px;
+        float: right;
     }
     body #content .listing-summary section {
         position: relative;
