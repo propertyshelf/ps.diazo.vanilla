@@ -3,7 +3,7 @@
 
 from setuptools import setup, find_packages
 
-version = '1.3.dev0'
+version = '1.3'
 description = 'Diazo Vanilla-Theme.'
 long_description = ('\n'.join([
     open('README.rst').read(),
