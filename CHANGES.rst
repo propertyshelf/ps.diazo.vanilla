@@ -6,7 +6,10 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- google-analytics script support
+- improve standard style (h1-h4)
+- Price style for ListingTiles
+- Bugfixes
 
 
 1.2 (2015-07-07)
