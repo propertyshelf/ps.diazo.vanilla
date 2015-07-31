@@ -26,10 +26,12 @@
         />
     </rules>
 
-    <append
-        css:content="#portal-footer-wrapper script"
-        css:theme="body"
-    />
+	<rules css:if-not-content="#google-script">
+		<append
+			css:content="#portal-footer-wrapper script"
+			css:theme="body"
+		/>
+	</rules>
 
     <rules css:if-content="#portal-personaltools .actionMenuHeader">
         <append
