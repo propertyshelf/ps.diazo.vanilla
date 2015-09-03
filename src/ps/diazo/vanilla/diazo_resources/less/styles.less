@@ -1,6 +1,18 @@
 @import "command.less";
 @import "color.less";
+
 // add for style 
+#global-wrapper .listing-collection-tile .collection-item.tileItem h2 a,
+#global-wrapper .listing-collection-tile .collection-item.tileItem h3 a {
+    font-size: 0.9em;
+}
+body #content-wrapper .portlet.portletCalendar .portletHeader a{
+    font-size: 1.1em;
+}
+body #content-wrapper .portlet.portletCalendar .portletHeader {
+    font-size: 1.4em;
+    margin: 0;
+}
 ul#content-views li {
     display: inline;
     margin: 0;
@@ -1424,6 +1436,9 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 1200px) and (min-width: 991px) {
+    #global-wrapper #content-wrapper .no-portlet .listing-collection-tile .collection-item {
+        width: 31%;
+    }
     body #content-wrapper .listing-summary figure img {
         height: 180px;
     }

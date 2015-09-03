@@ -54,7 +54,7 @@ Vanilla Theme (Diazo)
         - true
         - false
         - *Default:* slider_fullscreen = string:false
-    
+
 
 :Contact:
     *development@propertyshelf.com*
