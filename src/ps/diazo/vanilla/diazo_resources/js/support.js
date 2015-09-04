@@ -35,6 +35,10 @@ function balance_height(items){
       if(mod<1){
         //mod == 0 -> first element in a row
 		if(index > 0) {
+		  balance_item(item0, item1, item2);
+		  height0=item0.height();
+		  height1=item1.height();
+		  height2=item2.height();
           row_height= Math.max(height0, height1, height2);
           if(item0){
             $(item0).height(row_height);
@@ -51,7 +55,6 @@ function balance_height(items){
         // unset css defaults for calculate real height
 		item0.height('auto');
         item0.css('min-height', 'auto');
-        height0=item0.height();
         item1=null;
         height1=0;
         item2=null;
@@ -65,7 +68,6 @@ function balance_height(items){
 			  // unset css defaults for calculate real height
 			  item1.height('auto');
 			  item1.css('min-height', 'auto');
-			  height1=item1.height();
 			}
 		   if(mod==2){
 			  // remember third row item with the name 'item2'
@@ -74,7 +76,6 @@ function balance_height(items){
 			  // unset css defaults for calculate real height
 			  item2.height('auto');
 			  item2.css('min-height', 'auto');
-			  height2=item2.height();
 			}
 		}
 		// test for last element
@@ -96,70 +97,28 @@ function balance_height(items){
     //do nothing
   }
 }
-function balance_height_title(items){
-  //get nr. of item columns
-  columns= column_counter(items);
-  //we have more then 1 column
-  if(columns>1){
-    //set height depending on column nr.
-    $('div.collection-item.tileItem.visualIEFloatFix.collection-item').children('h3').each(function(index){
-      // Modulo operator to fing begin of each row 
-      mod=index%columns;
-      if(mod<1){
-        //mod == 0 -> first element in a row
-        if(index > 0){
-          // we are at least in second row
-          // get the max height of last row items
-          row_height= Math.max(height0, height1, height2);
-          // set the new heights for each item in the last row
-          if(item0){
-            $(item0).height(row_height);
-          }
-          if(item1){
-            $(item1).height(row_height);
-          }
-          if(item2){
-            $(item2).height(row_height);
-          }
-        }
-
-        // remember first row item with the name 'item0'
-        item0 =$(this);
-        // unset css defaults for calculate real height
-        item0.height('auto');
-        item0.css('min-height', 'auto');
-        height0=item0.height();
-        item1=null;
-        height1=0;
-        item2=null;
-        height2=0;
-
-      }
-      else{
-        if(mod==1){
-          // remember second row item with the name 'item1'
-          // last item when have 2 columns
-          item1 = $(this);
-          // unset css defaults for calculate real height
-          item1.height('auto');
-          item1.css('min-height', 'auto');
-          height1=item1.height();
-        }
-        if(mod==2){
-          // remember third row item with the name 'item2'
-          // last when have 3 columns
-          item2= $(this);
-          // unset css defaults for calculate real height
-          item2.height('auto');
-          item2.css('min-height', 'auto');
-          height2=item2.height();
-        }
-      }
-    });
-  }
-  else{
-    //do nothing
-  }
+function balance_item(item0, item1, item2){
+	console.log('new_row');
+	listing0=$(item0).children('h3, h2');
+	listing1=$(item1).children('h3, h2');
+	listing2=$(item2).children('h3, h2');
+	console.log(listing0);
+	console.log(listing1);
+	console.log(listing2);
+	height_listing0=listing0.height();
+	height_listing1=listing1.height();
+	height_listing2=listing2.height();
+	listing_row_height = Math.max(height_listing0, height_listing1, height_listing2);
+	console.log('MAX HEIGHT :' , listing_row_height);
+	if(listing0){
+		$(listing0).height(listing_row_height);
+	}
+	if(listing1){
+		$(listing1).height(listing_row_height);
+	}
+	if(listing2){
+		$(listing2).height(listing_row_height);
+	}
 }
 function is_ListingRowPage(){
     //returns true or false if the the page is Listing Summary
@@ -555,6 +514,9 @@ $(document).ready(function() {
 			$('.listing-collection-tile').each(function(index){
 				balance_height($(this));
 			});
+			$('.listing-collection-tile .collection-item').each(function(index){
+				balance_item($(this));
+			});
 		}
     });
 
@@ -562,6 +524,9 @@ $(document).ready(function() {
 		if ($('.listing-collection-tile').length >0){
 			$('.listing-collection-tile').each(function(index){
 				balance_height($(this));
+			});
+			$('.listing-collection-tile .collection-item').each(function(index){
+				balance_item($(this));
 			});
 		}
     });
