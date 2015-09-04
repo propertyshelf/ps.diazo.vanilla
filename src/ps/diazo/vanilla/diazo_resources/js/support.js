@@ -27,27 +27,15 @@ function balance_height(items){
   //we have more then 1 column
   if(columns>1){
     //set height depending on column nr.
+	lastelement = $(items).children('.collection-item').length;
+	lastelement = lastelement-1;
     $(items).children('.collection-item').each(function(index){
       // Modulo operator to fing begin of each row 
       mod=index%columns;
-	  // column = 3	
-	  // mod = 1%3 = 1
-	  // 3%3 = 0
-	  // 4%3 = 1
-	  // 5%3 = 2
-	  // 10%3 = 1
-	  // 11%3 = 2
-	  // column = 2
-	  // 0%2 = 0
-	  // 1%2 = 1
-	  // 2%2 = 0
       if(mod<1){
         //mod == 0 -> first element in a row
-        if(index > 0){
+		if(index > 0) {
           row_height= Math.max(height0, height1, height2);
-		  // height0 = 120
-		  // height1 = 0
-		  // height2 = 0
           if(item0){
             $(item0).height(row_height);
           }
@@ -57,41 +45,51 @@ function balance_height(items){
           if(item2){
             $(item2).height(row_height);
           }
-        }
-        // remember first row item with the name 'item0'
+		}
+		// remember first row item with the name 'item0'
         item0 =$(this);
         // unset css defaults for calculate real height
 		item0.height('auto');
         item0.css('min-height', 'auto');
-		// ความสูงที่แท้จริงของ Listing ตัวแรก = height0
         height0=item0.height();
         item1=null;
         height1=0;
         item2=null;
         height2=0;
-
+        
       }else{
-
-      if(mod==1){
-          // remember second row item with the name 'item1'
-          // last item when have 2 columns
-          item1 = $(this);
-          // unset css defaults for calculate real height
-          item1.height('auto');
-          item1.css('min-height', 'auto');
-          height1=item1.height();
+		  if(mod==1){
+			  // remember second row item with the name 'item1'
+			  // last item when have 2 columns
+			  item1 = $(this);
+			  // unset css defaults for calculate real height
+			  item1.height('auto');
+			  item1.css('min-height', 'auto');
+			  height1=item1.height();
+			}
+		   if(mod==2){
+			  // remember third row item with the name 'item2'
+			  // last when have 3 columns
+			  item2= $(this);
+			  // unset css defaults for calculate real height
+			  item2.height('auto');
+			  item2.css('min-height', 'auto');
+			  height2=item2.height();
+			}
 		}
-       if(mod==2){
-          // remember third row item with the name 'item2'
-          // last when have 3 columns
-          item2= $(this);
-          // unset css defaults for calculate real height
-          item2.height('auto');
-          item2.css('min-height', 'auto');
-          height2=item2.height();
-        }
-		}
-      
+		// test for last element
+			if(lastelement == index) {
+				row_height= Math.max(height0, height1, height2);
+			  if(item0){
+				$(item0).height(row_height);
+			  }
+			  if(item1){
+				$(item1).height(row_height);
+			  }
+			  if(item2){
+				$(item2).height(row_height);
+			  }
+			}
     });
   }
   else{
