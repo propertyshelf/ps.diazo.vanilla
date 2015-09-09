@@ -1,6 +1,37 @@
 @import "command.less";
 @import "color.less";
 
+// listing cover start
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .listing_type,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .object_type,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .view_type,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .location_type {
+    overflow: hidden;
+}
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .listing_type p,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .object_type p,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .view_type p,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .location_type p{
+    width: 50%;
+    float: left;
+}
+.portlet-right #maincontent .listing-collection-tile .collection-item.tileItem,
+.portlet-left #maincontent .listing-collection-tile .collection-item.tileItem{
+    float: left;
+    margin-left: 2%;
+    width: 31%;
+}
+.no-portlet #maincontent .listing-collection-tile .collection-item.tileItem{
+    float: left;
+    margin-left: 2%;
+    width: 31%;
+}
+.portlet-both #maincontent .listing-collection-tile .collection-item.tileItem{
+    float: left;
+    margin-left: 2%;
+    width: 48%;
+}
+// listing cover end
 // add for style 
 #global-wrapper .listing-collection-tile .collection-item.tileItem h2 a,
 #global-wrapper .listing-collection-tile .collection-item.tileItem h3 a {
@@ -208,9 +239,6 @@ body #global-wrapper .development-summary section {
     float: left;
     margin-right: 31px;
     padding: 13px 14px !important;
-}
-#global-wrapper #content-wrapper .portlet-both .listing-collection-tile .collection-item.tileItem{
-    width: 48%;
 }
 .listing-collection-tile .collection-item.tileItem a img {
     max-width: none;
@@ -992,11 +1020,6 @@ label.horizontal.collapser.expanded {
 .listing-collection-tile figure figcaption {
     display: none;
 }
-#global-wrapper #content-wrapper .listing-collection-tile .collection-item{
-    float: left;
-    margin-right: 2%;
-    width: 31%;
-}
 #global-wrapper #content-wrapper .width-7 .listing-collection-tile .collection-item, #global-wrapper #content-wrapper .width-6 .listing-collection-tile .collection-item , #global-wrapper #content-wrapper .width-5 .listing-collection-tile .collection-item{
     min-width: 48%;
 }
@@ -1435,7 +1458,11 @@ ul#portal-languageselector:hover li {
         max-height: 220px;
     }
 }
-@media (max-width: 1200px) and (min-width: 991px) {
+@media (max-width: 1200px) and (min-width: 992px) {
+    .portlet-right #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-left #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
+    }
     #global-wrapper #content-wrapper .no-portlet .listing-collection-tile .collection-item {
         width: 31%;
     }
@@ -1472,9 +1499,6 @@ ul#portal-languageselector:hover li {
         margin-left: 35px !important;
         padding-left: 26px !important;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 48%;
-    }
     .listing #listing-info {
         width: 100%;
         position: relative;
@@ -1490,7 +1514,14 @@ ul#portal-languageselector:hover li {
         max-height: 196px;
     }
 }
-@media (max-width: 990px) and (min-width: 981px) {   
+@media (max-width: 991px) and (min-width: 981px) {   
+    .no-portlet #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
+    }
+    .portlet-right #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-left #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
+    }
     body #global-wrapper .no-portlet #content-wrapper .width-8 .listing-collection-tile .collection-item.tileItem  {
         width: 100%;
     }
@@ -1539,9 +1570,6 @@ ul#portal-languageselector:hover li {
     #wrapper-inner .site-social div:nth-child {
         width: 37%;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 48%;
-    }
     .listing #listing-info {
         width: 100%;
         position: relative;
@@ -1556,11 +1584,15 @@ ul#portal-languageselector:hover li {
     #content-wrapper .listing-collection-tile figure {
         max-height: 196px;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 48%;
-    }
 }
 @media (max-width: 980px) and (min-width: 801px) {
+    .no-portlet #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
+    }
+    .portlet-right #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-left #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
+    }
     body #content-wrapper .listing-summary figure img {
         min-width: auto;
         position: static;    
@@ -1634,9 +1666,6 @@ ul#portal-languageselector:hover li {
     #wrapper-inner .site-social .site_social_phone {
         width: auto;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 48%;
-    }
     .listing #listing-info {
         width: 100%;
         position: relative;
@@ -1648,15 +1677,18 @@ ul#portal-languageselector:hover li {
     #global-wrapper tbody tr td p .image-inline{
         width: 100%;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 48%;
-        min-height: 370px;
-    }
     #content-wrapper .listing-collection-tile figure {
         max-height: 240px;
     }
 }
 @media (max-width: 800px) and (min-width: 768px) {
+    .no-portlet #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
+    }
+    .portlet-right #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-left #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
+    }
     body #content-wrapper .listing-summary figure img {
         min-width: auto;
         position: static;    
@@ -1742,14 +1774,14 @@ ul#portal-languageselector:hover li {
     #global-wrapper tbody tr td p .image-inline{
         width: 100%;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 48%;
-        min-height: 370px;
-    }
 }
 @media (max-width: 767px) and (min-width: 481px) {
-    body #global-wrapper #content-wrapper .portlet-both .listing-collection-tile .collection-item.tileItem {
-        width: 100%;
+    .no-portlet #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
+    }
+    .portlet-right #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-left #maincontent .listing-collection-tile .collection-item.tileItem{
+        width: 48%;
     }
     body #content-wrapper .listing-summary figure img {
         min-width: auto;
@@ -1827,15 +1859,9 @@ ul#portal-languageselector:hover li {
     body #global-wrapper #content-wrapper .development-summary dt{
         width: 40%;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item.tileItem {
-        height: auto !important;
-    }
     .portlet-both #maincontent{
         width: 100%;
         overflow: hidden;
-    }
-    body #global-wrapper #content-wrapper .portlet-both .listing-collection-tile .collection-item{
-        width: 100%;
     }
     #global-wrapper #content-wrapper .listing_style .listing-collection-tile .tileItem figure {
         width: 100%;
@@ -1949,9 +1975,6 @@ ul#portal-languageselector:hover li {
         position: relative;
         width: auto;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .item-heading {
-        width: 18%;
-    }
     .improved .name-of-property {
         margin-top: 10px !important;
     }
@@ -1981,10 +2004,6 @@ ul#portal-languageselector:hover li {
     #global-wrapper tbody tr td p .image-inline{
         max-width: 100%;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 100%;
-        min-height: auto;
-    }
     body div.width-10.position-0, body div.width-4.position-10{
         left: 0;
         margin-left: 0;
@@ -2002,8 +2021,7 @@ ul#portal-languageselector:hover li {
         display: block;
     }
     #content-wrapper .listing-collection-tile figure {
-        max-height: none;
-        min-height: auto;
+
     }
     body #content-wrapper .row .cell {
         float: left;
@@ -2017,8 +2035,21 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 401px) {
-    body #global-wrapper #content-wrapper .portlet-both .listing-collection-tile .collection-item.tileItem {
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item .item-heading{
+        font-weight: bold;
+    }
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem h3,
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem h2{
+        height: auto !important;
+    }
+    .portlet-both #maincontent .listing-collection-tile .collection-item.tileItem,
+    .no-portlet #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-right #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-left #maincontent .listing-collection-tile .collection-item.tileItem{
+        float: none;
+        margin-left: 0;
         width: 100%;
+        height: auto !important;
     }
     .listing-summary.properties-rows .tileItem{
         padding-bottom: 10px;
@@ -2112,18 +2143,12 @@ ul#portal-languageselector:hover li {
     body #global-wrapper #content-wrapper .development-summary dt{
         width: 40%;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item.tileItem {
-        height: auto !important;
-    }
     #maincontent {
         width: 100%;
     }
     .portlet-both #maincontent{
         width: 100%;
         overflow: hidden;
-    }
-    body #global-wrapper #content-wrapper .portlet-both .listing-collection-tile .collection-item{
-        width: 100%;
     }
     #global-wrapper .float_left_50 {
         float: none;
@@ -2254,9 +2279,6 @@ ul#portal-languageselector:hover li {
     #global-wrapper tbody tr td p .image-inline{
         max-width: 100%;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 100%;
-    }
     body div.width-10.position-0, body div.width-4.position-10{
         left: 0;
         margin-left: 0;
@@ -2299,8 +2321,30 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 400px) and (min-width: 1px) {
-    body #global-wrapper #content-wrapper .portlet-both .listing-collection-tile .collection-item.tileItem {
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item .item-heading{
+        font-weight: bold;
+    }
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item{
+        height: auto !important;
+    }
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.view_type .item-heading
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.location_type .item-heading,
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.object_type .item-heading,
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.listing_type .item-heading{
         width: 100%;
+    }
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem h3,
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem h2{
+        height: auto !important;
+    }
+    .portlet-both #maincontent .listing-collection-tile .collection-item.tileItem,
+    .no-portlet #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-right #maincontent .listing-collection-tile .collection-item.tileItem,
+    .portlet-left #maincontent .listing-collection-tile .collection-item.tileItem{
+        float: none;
+        margin-left: 0;
+        width: 100%;
+        height: auto !important;
     }
     .listing-summary.properties-rows .tileItem{
         padding-bottom: 10px;
@@ -2380,16 +2424,10 @@ ul#portal-languageselector:hover li {
     body #global-wrapper #content-wrapper .development-summary dt{
         width: 40%;
     }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item.tileItem {
-        height: auto !important;
-    }
     #maincontent {
         width: 100%;
     }
     .portlet-both #maincontent{
-        width: 100%;
-    }
-    body #global-wrapper #content-wrapper .portlet-both .listing-collection-tile .collection-item{
         width: 100%;
     }
     #global-wrapper .float_left_50 {
@@ -2525,9 +2563,6 @@ ul#portal-languageselector:hover li {
     }
     #global-wrapper tbody tr td p .image-inline{
         max-width: 100%;
-    }
-    #global-wrapper #content-wrapper .listing-collection-tile .collection-item {
-        width: 100%;
     }
     body div.width-10.position-0, body div.width-4.position-10{
         left: 0;

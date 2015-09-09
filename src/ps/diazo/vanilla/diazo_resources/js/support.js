@@ -33,22 +33,34 @@ function balance_height(items){
       // Modulo operator to fing begin of each row 
       mod=index%columns;
       if(mod<1){
+        // 0%2 = 0
+        // 1%2 = 1
+        // 2%2 = 0
+        // 3%2 = 1
         //mod == 0 -> first element in a row
     		if(index > 0) {
     		  balance_item(item0, item1, item2);
-    		  height0=item0.height();
-    		  height1=item1.height();
-    		  height2=item2.height();
-              row_height= Math.max(height0, height1, height2);
-              if(item0){
-                $(item0).height(row_height);
-              }
-              if(item1){
-                $(item1).height(row_height);
-              }
-              if(item2){
-                $(item2).height(row_height);
-              }
+      		height0=item0.height();
+          if(item1){
+            height1=item1.height();
+          } else {
+            height1=0;
+          }
+      		if(item2){
+            height2=item2.height();
+          } else {
+            height2=0;
+          }
+          row_height= Math.max(height0, height1, height2);
+          if(item0){
+            $(item0).height(row_height);
+          }
+          if(item1){
+            $(item1).height(row_height);
+          }
+          if(item2){
+            $(item2).height(row_height);
+          }
     		}
 		// remember first row item with the name 'item0'
         item0 =$(this);
@@ -59,7 +71,6 @@ function balance_height(items){
         height1=0;
         item2=null;
         height2=0;
-        
       }else{
 		  if(mod==1){
 			  // remember second row item with the name 'item1'
@@ -79,15 +90,21 @@ function balance_height(items){
 			}
 		}
       // For last row
-      /*
+      
 			if(lastelement == index) {
-        balance_field('h2, h3', item0, item1, item2);
-        balance_field('.item.location', item0, item1, item2);
-        balance_field('.item.location_type', item0, item1, item2);
-        balance_field('.item.view_type', item0, item1, item2);
-        balance_field('.item.lot_size', item0, item1, item2);
-        balance_field('.item.object_type', item0, item1, item2);
-
+        balance_bedbath(item0, item1, item2);
+        balance_item(item0, item1, item2);
+        height0=item0.height();
+        if(item1){
+          height1=item1.height();
+        } else {
+          height1=0;
+        }
+        if(item2){
+          height2=item2.height();
+        } else {
+          height2=0;
+        }
 				row_height= Math.max(height0, height1, height2);
 			  if(item0){
 				$(item0).height(row_height);
@@ -99,7 +116,7 @@ function balance_height(items){
 				$(item2).height(row_height);
 			  }
 
-			}*/
+			}
     });
   }
   else{
@@ -111,8 +128,16 @@ function balance_field(name, item0, item1, item2){
     item_field1=$(item1).children(name);
     item_field2=$(item2).children(name);
     field_height0=item_field0.height();
-    field_height1=item_field1.height();
-    field_height2=item_field2.height();
+    if(item1){
+      field_height1=item_field1.height(); 
+    } else {
+      field_height1=0;
+    }
+    if(item2){
+      field_height2=item_field2.height(); 
+    } else {
+      field_height2=0;
+    }
     listing_field_height = Math.max(field_height0, field_height1, field_height2);
     if(item_field0){
       $(item_field0).height(listing_field_height);
@@ -125,14 +150,11 @@ function balance_field(name, item0, item1, item2){
     }
 }
 function balance_bedbath(item0, item1, item2){
-    console.log('start bedbath');
-    console.log('balance_bedbath0:' , item0);
-    console.log('balance_bedbath1:' , item1);
-    console.log('balance_bedbath2:' , item2);
     name='.item.beds_baths';
     item_field0=$(item0).children(name);
     item_field1=$(item1).children(name);
     item_field2=$(item2).children(name);
+    clone='<div class="item beds_baths">&nbsp;</div>';
     if(item_field0.length > 0){
       next_object=item_field0.next();
       next_class=next_object.attr('class');
@@ -140,7 +162,7 @@ function balance_bedbath(item0, item1, item2){
       next_field=true;
       hasBedbath0=true;
     } else {
-      $(item0).children('.'+next_class).before('<div class="item beds_baths">&nbsp;</div>');
+      $(item0).children('.'+next_class).before(clone);
       hasBedbath0=false;
       next_field=false;
     }
@@ -153,7 +175,7 @@ function balance_bedbath(item0, item1, item2){
       }
       hasBedbath1=true;
     } else {
-      $(item1).children('.'+next_class).before('<div class="item beds_baths">&nbsp;</div>');
+      $(item1).children('.'+next_class).before(clone);
       hasBedbath1=false;
     }
     if(item_field2.length > 0){
@@ -165,7 +187,7 @@ function balance_bedbath(item0, item1, item2){
       }
       hasBedbath2=true;
     } else {
-      $(item2).children('.'+next_class).before('<div class="item beds_baths">&nbsp;</div>');
+      $(item2).children('.'+next_class).before(clone);
       hasBedbath2=false;
     }
     // One item have bedbath else return false
