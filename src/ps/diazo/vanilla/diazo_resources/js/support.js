@@ -34,26 +34,26 @@ function balance_height(items){
       mod=index%columns;
       if(mod<1){
         //mod == 0 -> first element in a row
-		if(index > 0) {
-		  balance_item(item0, item1, item2);
-		  height0=item0.height();
-		  height1=item1.height();
-		  height2=item2.height();
-          row_height= Math.max(height0, height1, height2);
-          if(item0){
-            $(item0).height(row_height);
-          }
-          if(item1){
-            $(item1).height(row_height);
-          }
-          if(item2){
-            $(item2).height(row_height);
-          }
-		}
+    		if(index > 0) {
+    		  balance_item(item0, item1, item2);
+    		  height0=item0.height();
+    		  height1=item1.height();
+    		  height2=item2.height();
+              row_height= Math.max(height0, height1, height2);
+              if(item0){
+                $(item0).height(row_height);
+              }
+              if(item1){
+                $(item1).height(row_height);
+              }
+              if(item2){
+                $(item2).height(row_height);
+              }
+    		}
 		// remember first row item with the name 'item0'
         item0 =$(this);
         // unset css defaults for calculate real height
-		item0.height('auto');
+		    item0.height('auto');
         item0.css('min-height', 'auto');
         item1=null;
         height1=0;
@@ -78,8 +78,16 @@ function balance_height(items){
 			  item2.css('min-height', 'auto');
 			}
 		}
-		// test for last element
+      // For last row
+      /*
 			if(lastelement == index) {
+        balance_field('h2, h3', item0, item1, item2);
+        balance_field('.item.location', item0, item1, item2);
+        balance_field('.item.location_type', item0, item1, item2);
+        balance_field('.item.view_type', item0, item1, item2);
+        balance_field('.item.lot_size', item0, item1, item2);
+        balance_field('.item.object_type', item0, item1, item2);
+
 				row_height= Math.max(height0, height1, height2);
 			  if(item0){
 				$(item0).height(row_height);
@@ -90,35 +98,90 @@ function balance_height(items){
 			  if(item2){
 				$(item2).height(row_height);
 			  }
-			}
+
+			}*/
     });
   }
   else{
     //do nothing
   }
 }
+function balance_field(name, item0, item1, item2){
+    item_field0=$(item0).children(name);
+    item_field1=$(item1).children(name);
+    item_field2=$(item2).children(name);
+    field_height0=item_field0.height();
+    field_height1=item_field1.height();
+    field_height2=item_field2.height();
+    listing_field_height = Math.max(field_height0, field_height1, field_height2);
+    if(item_field0){
+      $(item_field0).height(listing_field_height);
+    }
+    if(item_field1){
+      $(item_field1).height(listing_field_height);
+    }
+    if(item_field2){
+      $(item_field2).height(listing_field_height);
+    }
+}
+function balance_bedbath(item0, item1, item2){
+    console.log('start bedbath');
+    console.log('balance_bedbath0:' , item0);
+    console.log('balance_bedbath1:' , item1);
+    console.log('balance_bedbath2:' , item2);
+    name='.item.beds_baths';
+    item_field0=$(item0).children(name);
+    item_field1=$(item1).children(name);
+    item_field2=$(item2).children(name);
+    if(item_field0.length > 0){
+      next_object=item_field0.next();
+      next_class=next_object.attr('class');
+      next_class=next_class.replace(' ', '.');
+      next_field=true;
+      hasBedbath0=true;
+    } else {
+      $(item0).children('.'+next_class).before('<div class="item beds_baths">&nbsp;</div>');
+      hasBedbath0=false;
+      next_field=false;
+    }
+    if(item_field1.length > 0){
+      if(next_field==false){
+        next_object=item_field1.next();
+        next_class=next_object.attr('class');
+        next_class=next_class.replace(' ', '.');
+        next_field=true;
+      }
+      hasBedbath1=true;
+    } else {
+      $(item1).children('.'+next_class).before('<div class="item beds_baths">&nbsp;</div>');
+      hasBedbath1=false;
+    }
+    if(item_field2.length > 0){
+      if(next_field==false){
+        next_object=item_field2.next();
+        next_class=next_object.attr('class');
+        next_class=next_class.replace(' ', '.');
+        next_field=true;
+      }
+      hasBedbath2=true;
+    } else {
+      $(item2).children('.'+next_class).before('<div class="item beds_baths">&nbsp;</div>');
+      hasBedbath2=false;
+    }
+    // One item have bedbath else return false
+    // Find out with item dont have bedbath
+    // Prepend this div class to next field
+}
 function balance_item(item0, item1, item2){
-	console.log('new_row');
-	listing0=$(item0).children('h3, h2');
-	listing1=$(item1).children('h3, h2');
-	listing2=$(item2).children('h3, h2');
-	console.log(listing0);
-	console.log(listing1);
-	console.log(listing2);
-	height_listing0=listing0.height();
-	height_listing1=listing1.height();
-	height_listing2=listing2.height();
-	listing_row_height = Math.max(height_listing0, height_listing1, height_listing2);
-	console.log('MAX HEIGHT :' , listing_row_height);
-	if(listing0){
-		$(listing0).height(listing_row_height);
-	}
-	if(listing1){
-		$(listing1).height(listing_row_height);
-	}
-	if(listing2){
-		$(listing2).height(listing_row_height);
-	}
+    balance_bedbath(item0, item1, item2);
+    // class title
+    balance_field('h2, h3', item0, item1, item2);
+    // class item 
+    balance_field('.item.location', item0, item1, item2);
+    balance_field('.item.location_type', item0, item1, item2);
+    balance_field('.item.view_type', item0, item1, item2);
+    balance_field('.item.lot_size', item0, item1, item2);
+    balance_field('.item.object_type', item0, item1, item2);
 }
 function is_ListingRowPage(){
     //returns true or false if the the page is Listing Summary
@@ -509,13 +572,10 @@ $(document).ready(function() {
         }
     });
 
-    $( window ).load(function() {
+    $(window).load(function() {
 		if ($('.listing-collection-tile').length >0){
 			$('.listing-collection-tile').each(function(index){
 				balance_height($(this));
-			});
-			$('.listing-collection-tile .collection-item').each(function(index){
-				balance_item($(this));
 			});
 		}
     });
@@ -524,9 +584,6 @@ $(document).ready(function() {
 		if ($('.listing-collection-tile').length >0){
 			$('.listing-collection-tile').each(function(index){
 				balance_height($(this));
-			});
-			$('.listing-collection-tile .collection-item').each(function(index){
-				balance_item($(this));
 			});
 		}
     });
