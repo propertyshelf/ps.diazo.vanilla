@@ -1,3 +1,9 @@
+function config_reset_height_listing(listing){
+  var h = ['h3', 'h2', '.item.listing_type', '.item.location', '.item.location_type', '.item.view_type', '.item.lot_size', '.item.object_type'];
+  $(listing).children(h).each(function(index){
+    $(this).height('auto');
+  });
+}
 function column_counter(items){
   my_width = $(items).width();
   my_head_width = $(items).find('.collection-item h2:first').width();
@@ -63,14 +69,14 @@ function balance_height(items){
           }
     		}
 		// remember first row item with the name 'item0'
-        item0 =$(this);
-        // unset css defaults for calculate real height
-		    item0.height('auto');
-        item0.css('min-height', 'auto');
-        item1=null;
-        height1=0;
-        item2=null;
-        height2=0;
+      item0 =$(this);
+      // unset css defaults for calculate real height
+		  item0.height('auto');
+      item0.css('min-height', 'auto');
+      item1=null;
+      height1=0;
+      item2=null;
+      height2=0;
       }else{
 		  if(mod==1){
 			  // remember second row item with the name 'item1'
@@ -88,7 +94,7 @@ function balance_height(items){
 			  item2.height('auto');
 			  item2.css('min-height', 'auto');
 			}
-		}
+		  }
       // For last row
       
 			if(lastelement == index) {
@@ -199,6 +205,7 @@ function balance_item(item0, item1, item2){
     // class title
     balance_field('h2, h3', item0, item1, item2);
     // class item 
+    balance_field('.item.listing_type', item0, item1, item2);
     balance_field('.item.location', item0, item1, item2);
     balance_field('.item.location_type', item0, item1, item2);
     balance_field('.item.view_type', item0, item1, item2);
@@ -604,7 +611,10 @@ $(document).ready(function() {
 
     $(window).resize(function() {
 		if ($('.listing-collection-tile').length >0){
-			$('.listing-collection-tile').each(function(index){
+      $('.listing-collection-tile .collection-item').each(function(index){  
+        config_reset_height_listing($(this));
+      });
+			$('.listing-collection-tile').each(function(index){  
 				balance_height($(this));
 			});
 		}

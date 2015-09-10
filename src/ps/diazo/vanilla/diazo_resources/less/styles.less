@@ -2,16 +2,16 @@
 @import "color.less";
 
 // listing cover start
-#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .listing_type,
-#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .object_type,
-#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .view_type,
-#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .location_type {
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.listing_type,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.object_type,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.view_type,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.location_type {
     overflow: hidden;
 }
-#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .listing_type p,
-#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .object_type p,
-#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .view_type p,
-#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .location_type p{
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.listing_type p,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.object_type p,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.view_type p,
+#global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.location_type p{
     width: 50%;
     float: left;
 }
@@ -1455,6 +1455,7 @@ ul#portal-languageselector:hover li {
         width: 42%;
     } 
     #content-wrapper .listing-collection-tile figure {
+        min-height: 220px;
         max-height: 220px;
     }
 }
@@ -1511,7 +1512,8 @@ ul#portal-languageselector:hover li {
         width: 100%;
     }
     #content-wrapper .listing-collection-tile figure {
-        max-height: 196px;
+        min-height: 220px;
+        max-height: 220px;
     }
 }
 @media (max-width: 991px) and (min-width: 981px) {   
@@ -1582,7 +1584,8 @@ ul#portal-languageselector:hover li {
         width: 100%;
     }
     #content-wrapper .listing-collection-tile figure {
-        max-height: 196px;
+        min-height: 220px;
+        max-height: 220px;
     }
 }
 @media (max-width: 980px) and (min-width: 801px) {
@@ -1678,6 +1681,7 @@ ul#portal-languageselector:hover li {
         width: 100%;
     }
     #content-wrapper .listing-collection-tile figure {
+        min-height: 240px;
         max-height: 240px;
     }
 }
@@ -2327,7 +2331,7 @@ ul#portal-languageselector:hover li {
     #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item{
         height: auto !important;
     }
-    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.view_type .item-heading
+    #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.view_type .item-heading,
     #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.location_type .item-heading,
     #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.object_type .item-heading,
     #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.listing_type .item-heading{
