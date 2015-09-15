@@ -39,13 +39,9 @@ function balance_height(items){
       // Modulo operator to fing begin of each row 
       mod=index%columns;
       if(mod<1){
-        // 0%2 = 0
-        // 1%2 = 1
-        // 2%2 = 0
-        // 3%2 = 1
         //mod == 0 -> first element in a row
     		if(index > 0) {
-    		  balance_item(item0, item1, item2);
+    		balance_item(item0, item1, item2);
       		height0=item0.height();
           if(item1){
             height1=item1.height();
@@ -71,7 +67,7 @@ function balance_height(items){
 		// remember first row item with the name 'item0'
       item0 =$(this);
       // unset css defaults for calculate real height
-		  item0.height('auto');
+	  item0.height('auto');
       item0.css('min-height', 'auto');
       item1=null;
       height1=0;
@@ -97,7 +93,7 @@ function balance_height(items){
 		  }
       // For last row
       
-			if(lastelement == index) {
+		if(lastelement == index) {
         balance_bedbath(item0, item1, item2);
         balance_item(item0, item1, item2);
         height0=item0.height();
@@ -111,7 +107,7 @@ function balance_height(items){
         } else {
           height2=0;
         }
-				row_height= Math.max(height0, height1, height2);
+			row_height= Math.max(height0, height1, height2);
 			  if(item0){
 				$(item0).height(row_height);
 			  }
@@ -160,42 +156,23 @@ function balance_bedbath(item0, item1, item2){
     item_field0=$(item0).children(name);
     item_field1=$(item1).children(name);
     item_field2=$(item2).children(name);
-    clone='<div class="item beds_baths">&nbsp;</div>';
-    if(item_field0.length > 0){
-      next_object=item_field0.next();
-      next_class=next_object.attr('class');
-      next_class=next_class.replace(' ', '.');
-      next_field=true;
-      hasBedbath0=true;
-    } else {
-      $(item0).children('.'+next_class).before(clone);
-      hasBedbath0=false;
-      next_field=false;
-    }
-    if(item_field1.length > 0){
-      if(next_field==false){
-        next_object=item_field1.next();
-        next_class=next_object.attr('class');
-        next_class=next_class.replace(' ', '.');
-        next_field=true;
-      }
-      hasBedbath1=true;
-    } else {
-      $(item1).children('.'+next_class).before(clone);
-      hasBedbath1=false;
-    }
-    if(item_field2.length > 0){
-      if(next_field==false){
-        next_object=item_field2.next();
-        next_class=next_object.attr('class');
-        next_class=next_class.replace(' ', '.');
-        next_field=true;
-      }
-      hasBedbath2=true;
-    } else {
-      $(item2).children('.'+next_class).before(clone);
-      hasBedbath2=false;
-    }
+	if ($('.collection-item.tileItem .item.beds_baths').length > 0){
+		next_class= $('.collection-item.tileItem').find(name).next().attr('class').replace(' ', '.');
+		clone='<div class="item beds_baths">&nbsp;</div>';
+		if(item_field0.length>0 || item_field1.length>0 ||item_field2.length>0){
+			if(item_field0.length < 1){
+			  $(item0).children('.'+next_class).before(clone);
+			}
+			if(item_field1.length < 1){
+			  $(item1).children('.'+next_class).before(clone);
+			}
+			if(item_field2.length < 1){
+			  $(item2).children('.'+next_class).before(clone);
+			}
+		}
+	} else {
+		return false;
+	}
     // One item have bedbath else return false
     // Find out with item dont have bedbath
     // Prepend this div class to next field
