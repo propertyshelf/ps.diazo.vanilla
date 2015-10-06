@@ -6,7 +6,8 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- auto-balance ListingCollections in covers
+- minified scripts and styles
 
 
 1.3 (2015-07-28)
