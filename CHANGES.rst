@@ -3,7 +3,7 @@ Changelog
 =========
 
 
-1.4 (unreleased)
+1.4 (2015-10-06)
 ----------------
 
 - auto-balance ListingCollections in covers
