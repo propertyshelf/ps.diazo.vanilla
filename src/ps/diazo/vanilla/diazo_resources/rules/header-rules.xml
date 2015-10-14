@@ -56,7 +56,7 @@
 
     <before 
         css:content=".development__header"
-        css:theme="#content"
+        css:theme="#content-wrapper"
         method="raw"
     />
 

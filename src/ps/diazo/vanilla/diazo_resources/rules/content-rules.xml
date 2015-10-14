@@ -46,7 +46,7 @@
             css:theme-children=".account .account-login"
             css:content-children="#portal-personaltools-wrapper #portal-personaltools #anon-personalbar"
     />
-
+	
     <rules css:if-content="#visual-portal-wrapper">
         <drop
             css:theme=".toggle"

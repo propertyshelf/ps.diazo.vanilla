@@ -27,7 +27,6 @@
             <!-- Add custom stylesheet. -->
             <link rel="stylesheet" href="{$portal_url}/++theme++ps.diazo.vanilla/css/styles.css" type="text/css"/>
             <!--Include Google Fonts. -->
-            <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
         </after>
 
         <before theme-children="/html/body" method="raw">
