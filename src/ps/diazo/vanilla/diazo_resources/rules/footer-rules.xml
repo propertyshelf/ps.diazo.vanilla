@@ -4,14 +4,9 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <replace css:content="#doormat-container"
-            css:theme="#footer-top-inner.container .row"/>
-    <replace css:content-children="#portal-colophon"
-            css:theme="#colophone .container .row"/>
-    <replace css:content-children="#footer #footer-inner .row"
-            css:theme="#colophone .container .siteactions"/>
-    <replace css:content="#portal-footer"
-            css:theme="#portal-footer"/>
-   	<replace css:content="#portal-siteactions"
-            css:theme-children="#portal-siteactions .container"/>
+	<replace 
+		css:content="#portal-footer-wrapper"
+		css:theme-children="#footer-top-inner"
+	/>
+
 </rules>
