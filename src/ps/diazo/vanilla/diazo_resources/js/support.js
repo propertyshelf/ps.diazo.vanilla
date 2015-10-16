@@ -508,6 +508,9 @@ $(document).ready(function() {
         });
     }
     // only do when we have a listingbar
+    if($('.listing.detail').length > 0){
+		$('#listing-info').insertAfter('#listing-images');
+    }
     if($('.listingBar').length > 0){
         enhance_listingbar();
     }

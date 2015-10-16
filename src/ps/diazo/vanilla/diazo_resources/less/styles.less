@@ -1466,6 +1466,9 @@ ul#portal-languageselector:hover li {
     #content-wrapper .listing #listing-images {
         float: none;
     }
+    body #content-wrapper .listing.detail #listing-images{
+        float: left;
+    }
     body #global-wrapper #content-wrapper .row .cell .q_search div.listing-search-tile h2 {
         margin-left: 0;
     }
@@ -1776,8 +1779,15 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {
-    .no-portlet .listing.detail #listing-info {
+    body #content-wrapper .portlet-right .listing.detail #listing-images,
+    body #content-wrapper .portlet-left .listing.detail #listing-images,
+    body #content-wrapper .portlet-both .listing.detail #listing-images,
+    body #content-wrapper .no-portlet .listing.detail #listing-images{
+        margin: 0 auto;
+    }
+    body .no-portlet .listing.detail #listing-info {
         width: 100%;
+        top:0;
     }
     .no-portlet #maincontent .listing-collection-tile .collection-item.tileItem{
         width: 48%;
@@ -2038,8 +2048,15 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 401px) {
+    body #content-wrapper .portlet-right .listing.detail #listing-images,
+    body #content-wrapper .portlet-left .listing.detail #listing-images,
+    body #content-wrapper .portlet-both .listing.detail #listing-images,
+    body #content-wrapper .no-portlet .listing.detail #listing-images{
+        margin: 0 auto;
+    }
     .no-portlet .listing.detail #listing-info {
         width: 100%;
+        top: 0;
     }
     #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.listing_type,
     #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.object_type,
@@ -2333,8 +2350,15 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 400px) and (min-width: 1px) {
+    body #content-wrapper .portlet-right .listing.detail #listing-images,
+    body #content-wrapper .portlet-left .listing.detail #listing-images,
+    body #content-wrapper .portlet-both .listing.detail #listing-images,
+    body #content-wrapper .no-portlet .listing.detail #listing-images{
+        margin: 0 auto;
+    }
     .no-portlet .listing.detail #listing-info {
         width: 100%;
+        top: 0;
     }
     #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.listing_type,
     #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.object_type,
