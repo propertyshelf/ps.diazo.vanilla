@@ -1,3 +1,37 @@
+// On carousel start
+#global-wrapper #content-wrapper .move_me{
+    left: 67.5%;
+    position: absolute;
+    top: -464px;
+    width: 360px;
+}
+#global-wrapper #content-wrapper #maincontent #content .on-carousel{
+    background: rgba(3, 3, 3, 0.5) none repeat scroll 0 0;
+    padding: 1em;
+}
+#content-wrapper #maincontent #content .on-carousel .tile-header h2{
+    margin-top:0;
+    color: #fff;
+}
+#content-wrapper #maincontent #content .on-carousel #form label.horizontal,
+#content-wrapper #maincontent #content .on-carousel #form .label{
+    color: #fff;
+}
+#content-wrapper #maincontent #content .on-carousel #form .option{
+    float: left;
+    width: 50%;
+}
+#content-wrapper #maincontent #content .on-carousel #form #form-buttons-search{
+    background-color: #bababa;
+    border: medium none transparent;
+    height: 30px;
+    opacity: 1;
+    padding: 0 20px;
+}
+#content-wrapper #maincontent #content .on-carousel #form #form-buttons-search:hover{
+    box-shadow: 0 0 0 20px #797979 inset;
+}
+// On carousel end
 #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.listing_type,
 #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.object_type,
 #global-wrapper #content-wrapper #maincontent .listing-collection-tile .collection-item.tileItem .item.view_type,
@@ -1443,6 +1477,10 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 1200px) and (min-width: 992px) {
+    #global-wrapper #content-wrapper .move_me {
+        left: 60%;
+        top: -437px;
+    }
     .no-portlet .listing.detail #listing-info {
         float: right;
         top: -26px;
@@ -1507,6 +1545,10 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 991px) and (min-width: 981px) {   
+    #global-wrapper #content-wrapper .move_me {
+        left: 60%;
+        top: -437px;
+    }
     .no-portlet .listing.detail #listing-info {
         float: right;
         width: 37%;
@@ -1778,7 +1820,20 @@ ul#portal-languageselector:hover li {
         width: 100%;
     }
 }
+@media (max-width: 767px) and (min-width: 660px) {
+    body .listing #listing-info dt{
+        width: 24%;
+    }
+    body .listing #listing-info dd{
+        max-width: 70%;
+        width: auto;
+    }
+}
 @media (max-width: 767px) and (min-width: 481px) {
+    #global-wrapper #content-wrapper .move_me {
+        left: 48%;
+        top: -308px;
+    }
     body #content-wrapper .portlet-right .listing.detail #listing-images,
     body #content-wrapper .portlet-left .listing.detail #listing-images,
     body #content-wrapper .portlet-both .listing.detail #listing-images,
@@ -2048,6 +2103,13 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 401px) {
+    body .listing #listing-info dt{
+        width: 42%;
+    }
+    body .listing #listing-info dd{
+        max-width: 53%;
+        width: auto;
+    }
     body #content-wrapper .portlet-right .listing.detail #listing-images,
     body #content-wrapper .portlet-left .listing.detail #listing-images,
     body #content-wrapper .portlet-both .listing.detail #listing-images,
@@ -2350,6 +2412,13 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 400px) and (min-width: 1px) {
+    body .listing #listing-info dt{
+        width: 49%;
+    }
+    body .listing #listing-info dd{
+        max-width: 45%;
+        width: auto;
+    }
     body #content-wrapper .portlet-right .listing.detail #listing-images,
     body #content-wrapper .portlet-left .listing.detail #listing-images,
     body #content-wrapper .portlet-both .listing.detail #listing-images,

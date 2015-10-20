@@ -1,0 +1,13 @@
+#internallinkcontainer div.row {
+float: none;
+}
+#content #internallinkcontainer .list.item span,
+#content #internallinkcontainer .list.item a {
+position: inherit;
+}
+#internallinkcontainer input[type="radio"] {
+vertical-align:     middle;
+}
+#plonebrowser #footer{
+position: relative !important;
+}

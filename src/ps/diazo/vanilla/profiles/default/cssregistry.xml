@@ -12,7 +12,18 @@
     cookable="True"
     enabled="1"
     expression=""
-    />
+  />
   -->
+  <stylesheet title=""
+    id="++theme++ps.diazo.vanilla/css/bugfix.css"
+    media="all"
+    rel="stylesheet"
+    rendering="link"
+    cacheable="True"
+    compression="safe"
+    cookable="True"
+    enabled="1"
+    expression=""
+  />
 
 </object>

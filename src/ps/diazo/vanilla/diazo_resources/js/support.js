@@ -495,7 +495,16 @@ function old_carousel(){
     }
 }
 
+function on_carousel(){
+	search_tile=$('.listing-search-tile');
+    search_tile.closest('.row').addClass('move_me');
+    search_tile.closest('.cell').removeClass().addClass('center_me');
+}
+
 $(document).ready(function() {
+    if($('.on-carousel .listing-search-tile').length > 0){
+		on_carousel();
+	}
 	old_carousel();
     if (is_ListingRowPage()) {
         // set classes
