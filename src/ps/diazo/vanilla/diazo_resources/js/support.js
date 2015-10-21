@@ -496,12 +496,43 @@ function old_carousel(){
 }
 
 function on_carousel(){
-	search_tile=$('.listing-search-tile');
+	search_tile=$('.on-carousel .listing-search-tile');
     search_tile.closest('.row').addClass('move_me');
     search_tile.closest('.cell').removeClass().addClass('center_me');
 }
 
+function improve_class_listing_search(){
+	my_options = $('.listing-search-tile select option');
+	$(my_options).each(function(){
+		get_val = $(this).val();
+		$(this).addClass(get_val);
+	});
+
+	my_input = $('.listing-search-tile .option input');
+	$(my_input).each(function(){
+		get_val = $(this).val();
+		$(this).closest('span.option').addClass(get_val);
+	});
+}
+
+function improve_placeholder_listing_search(){
+	search_tile = $('.listing-search-tile');
+		if(search_tile.length>0){
+		    //set placeholder for price
+			p_min=search_tile.find('#formfield-form-widgets-price_min label');
+			search_tile.find('#form-widgets-price_min').attr("placeholder", p_min.text().trim());
+			p_max=search_tile.find('#formfield-form-widgets-price_max label');
+			search_tile.find('#form-widgets-price_max').attr("placeholder", p_max.text().trim());
+			city=search_tile.find('#formfield-form-widgets-location_city label');
+			search_tile.find('#formfield-form-widgets-location_city input').attr("placeholder", city.text().trim());
+	}
+}
+
 $(document).ready(function() {
+    if($('.listing-search-tile').length > 0){
+		improve_placeholder_listing_search();
+		improve_class_listing_search();
+	}
     if($('.on-carousel .listing-search-tile').length > 0){
 		on_carousel();
 	}
