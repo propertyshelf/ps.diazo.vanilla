@@ -35,6 +35,7 @@
               <xsl:if css:test=".carousel-banners"> active-carousel-banner</xsl:if>
               <xsl:if css:test="#portal-column-one"> portal-col-one</xsl:if>
               <xsl:if css:test="#portal-column-content"> portal-col-content</xsl:if>
+              <xsl:if css:test=".featurenavi"> active-featurenavi</xsl:if>
               <xsl:if css:test="#portal-column-two"> portal-col-two</xsl:if> header-<xsl:value-of select="$header_class"/>
             </xsl:attribute>
         </before>

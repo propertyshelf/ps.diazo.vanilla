@@ -64,16 +64,14 @@
         css:content="#portal-languageselector"
         css:theme-children=".language-switcher"
     />
-        <after css:theme-children=".site-social" method="raw">
-            <div class="site_contact_email">
-                <a href="mailto:{$email}"><xsl:value-of select="$email" /></a>
-            </div>
-        </after>
-        
-        <after css:theme-children=".site-social" method="raw">
-            <div class="site_contact_phone">
-                <a href="tel:{$nr_phone}"><xsl:value-of select="$nr_phone_show" /></a>
-            </div>
-        </after>
-
+    <after css:theme-children=".site-social" method="raw">
+        <div class="site_contact_email">
+            <a href="mailto:{$email}"><xsl:value-of select="$email" /></a>
+        </div>
+    </after>
+    <after css:theme-children=".site-social" method="raw">
+        <div class="site_contact_phone">
+            <a href="tel:{$nr_phone}"><xsl:value-of select="$nr_phone_show" /></a>
+        </div>
+    </after>
 </rules>
