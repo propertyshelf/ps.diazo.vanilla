@@ -26,10 +26,14 @@
         />
     </rules>
 
-	<rules css:if-not-content="#google-script">
+	<rules css:if-content="#portal-footer-wrapper script">
 		<append
 			css:content="#portal-footer-wrapper script"
 			css:theme="body"
+			method="raw"
+		/>
+		<drop
+			css:content="#portal-footer-wrapper script"
 		/>
 	</rules>
 
