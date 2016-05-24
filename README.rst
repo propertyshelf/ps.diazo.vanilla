@@ -1,10 +1,9 @@
-=====================
-Vanilla Theme (Diazo)
-=====================
+Propertyshelf Vanilla Theme
+===========================
 
 *This installable Diazo Theme product delivers a general and mobile-ready implementation of a html5 template for Plone with activated Listing embedding tools. It is intended to deliver a library of standard features, which can be re-used in different customized variations.*
 
-:Platform:  
+:Platform:
     - Plone CMS > 4.3
 
 :Features:
@@ -13,7 +12,7 @@ Vanilla Theme (Diazo)
     - feature-library for custom implementations
     - Carousel support
     - Covers support and improvements
-    - full support of propertyshelfs embedding features 
+    - full support of propertyshelfs embedding features
 
 :Dependencies:
     - plone.app.theming (Diazo support)

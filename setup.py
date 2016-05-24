@@ -1,18 +1,26 @@
 # -*- coding: utf-8 -*-
 """Setup for ps.diazo.vanilla package."""
 
-from setuptools import setup, find_packages
+from setuptools import (
+    find_packages,
+    setup,
+)
 
 version = '1.5.dev0'
-description = 'Diazo Vanilla-Theme.'
+description = 'Propertyshelf Vanilla Theme.'
 long_description = ('\n'.join([
     open('README.rst').read(),
+    'Contributors',
+    '------------\n',
+    open('CONTRIBUTORS.rst').read(),
     open('CHANGES.rst').read(),
 ]))
 
 install_requires = [
     'setuptools',
     # -*- Extra requirements: -*-
+    'plone.api',
+    'plone.app.theming',
     'z3c.jbot',
 ]
 
@@ -27,6 +35,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Plone',
+        'Framework :: Plone :: 4.1',
         'Framework :: Plone :: 4.2',
         'Framework :: Plone :: 4.3',
         'Intended Audience :: Developers',
@@ -35,7 +44,7 @@ setup(
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
     ],
-    keywords='plone diazo vanilla',
+    keywords='plone diazo',
     author='Propertyshelf, Inc.',
     author_email='development@propertyshelf.com',
     url='https://github.com/propertyshelf/ps.diazo.vanilla',
@@ -48,7 +57,9 @@ setup(
     zip_safe=False,
     extras_require=dict(
         test=[
+            'plone.app.robotframework',
             'plone.app.testing',
+            'robotframework-selenium2screenshots',
         ],
     ),
     install_requires=install_requires,
