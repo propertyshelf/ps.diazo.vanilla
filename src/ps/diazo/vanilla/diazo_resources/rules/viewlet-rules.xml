@@ -4,18 +4,25 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <!-- Add manage-viewlets Top-->
-    <rules css:if-content="#plone-portaltop.managedViewlets">
-        <before
-            css:content-children="#visual-portal-wrapper #portal-top .cell"
-            css:theme="#content .row #maincontent"
-          />
-    </rules>
-    <!-- Add manage-viewlets Footer-->
-    <rules css:if-content="#plone-portalfooter.managedViewlets">
-        <after css:content-children="#visual-portal-wrapper #portal-footer-wrapper .cell"
-                css:theme="#content .row #maincontent"/>
-    </rules>
-    <replace css:content="dt.portletHeader"
-            css:theme-children=".portlet .portletHeader span"/>
+  <!-- Add manage-viewlets Top-->
+  <rules css:if-content="#plone-portaltop.managedViewlets">
+    <before
+        css:content-children="#visual-portal-wrapper #portal-top .cell"
+        css:theme="#content .row #maincontent"
+        />
+  </rules>
+
+  <!-- Add manage-viewlets Footer-->
+  <rules css:if-content="#plone-portalfooter.managedViewlets">
+    <after
+        css:content-children="#visual-portal-wrapper #portal-footer-wrapper .cell"
+        css:theme="#content .row #maincontent"
+        />
+  </rules>
+
+  <replace
+      css:content="dt.portletHeader"
+      css:theme-children=".portlet .portletHeader span"
+      />
+
 </rules>
