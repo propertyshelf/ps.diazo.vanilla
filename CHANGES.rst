@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.6 (unreleased)
-----------------
+1.5.1 (2016-05-25)
+------------------
 
 - Fixed wrong HiddenProfiles utility name.
 
