@@ -4,21 +4,22 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add support for plone.mls.listing > 1.7.
+- Code cleanup.
 
 
 1.4 (2015-10-06)
 ----------------
 
-- auto-balance ListingCollections in covers
-- minified scripts and styles
+- Auto-balance ListingCollections in covers
+- Minified scripts and styles
 
 
 1.3 (2015-07-28)
 ----------------
 
-- google-analytics script support
-- improve standard style (h1-h4)
+- Google-analytics script support
+- Improve standard style (h1-h4)
 - Price style for ListingTiles
 - Bugfixes
 
@@ -26,84 +27,84 @@ Changelog
 1.2 (2015-07-07)
 ----------------
 
-- improve on cached developments summary images
-- add fullscreen carousel
+- Improve on cached developments summary images
+- Add fullscreen carousel
 
 
 1.1 (2015-06-16)
 ----------------
 
-- update README.rst
+- Update README.rst
 
 
 1.0 (2015-06-11)
 ----------------
 
-- include *Devolpments header embedding*
+- Include *Devolpments header embedding*
 
 
 0.9 (2015-06-04)
 ----------------
 
-- stable release for shared hosting
+- table release for shared hosting
 
 
 0.8.3 (2015-06-02)
 ------------------
 
-- css cleanup
-- support small-screen PS Jssor Slider
+- CSS cleanup
+- Support small-screen PS Jssor Slider
 
 
 0.8.2 (2015-06-02)
 ------------------
 
-- fix javascript for improving ListingDetails
-- catch error on Developments JS
+- Fix javascript for improving ListingDetails
+- Catch error on Developments JS
 
 
 0.8.1 (2015-06-02)
 ------------------
 
-- remove console.log statements from support.js
+- Remove console.log statements from support.js
 
 
 0.8 (2015-06-02)
 ----------------------
 
-- enable calculated height for ListingCollection Tiles
+- Enable calculated height for ListingCollection Tiles
 
 
 0.7.1
 ----------------------
 
-- fix broken 0.7 release
+- Fix broken 0.7 release
 
 
 0.7
 ------------------------------
 
-- fix broken 0.6 release
+- Fix broken 0.6 release
 
 
 0.6
 ------------------------------
 
-- improved ListingQuickSearch
-- improved ListTiles (for covers)
+- Improved ListingQuickSearch
+- Improved ListTiles (for covers)
 
 
 0.5
 -------------------
 
-- new default phone nr. in diazo parameters
-- bordered listing style (ListingResults) 
+- New default phone nr. in diazo parameters
+- Bordered listing style (ListingResults)
 
 
 0.4
 -------------------
 
-- fixed missing div before content header
+- Fixed missing div before content header
 
 
 
@@ -117,7 +118,7 @@ Changelog
 0.2
 -------------------
 
-- improved default styles & icons
+- Improved default styles & icons
 
 
 0.1
