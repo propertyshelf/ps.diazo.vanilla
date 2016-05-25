@@ -322,6 +322,10 @@ function map_listing_data(obj) {
     dict.area = obj.find('.listing__lot_size dd').html();
     dict.bedbath = obj.find('.listing__beds_baths dd').html();
     dict.locationtype = obj.find('.listing__location_type dd').html();
+    dict.loctype = obj.find('.listing__location_type dd').html();
+    if (dict.type == "land") {
+      dict.loctype = obj.find('.listing__view_type dd').html();
+    }
   } else {
     counter = jQuery(obj).children('dd').length;
     if (counter < 10) {
