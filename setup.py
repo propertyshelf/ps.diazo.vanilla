@@ -6,7 +6,7 @@ from setuptools import (
     setup,
 )
 
-version = '1.5.1'
+version = '1.6.dev0'
 description = 'Propertyshelf Vanilla Theme.'
 long_description = ('\n'.join([
     open('README.rst').read(),
