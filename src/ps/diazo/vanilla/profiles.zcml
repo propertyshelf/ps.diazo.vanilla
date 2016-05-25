@@ -22,7 +22,7 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-  <utility factory=".setuphandlers.HiddenProfiles" name="ps.diazo.realia" />
+  <utility factory=".setuphandlers.HiddenProfiles" name="ps.diazo.vanilla" />
 
 
   <!-- GenericSetup Import Steps. -->
